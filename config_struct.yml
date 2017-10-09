@@ -10,3 +10,39 @@ database_host:
     type: text
     default: localhoststs
     required: true
+database_port:
+    type: integer
+    default: 3306
+    required: true
+database_name:
+    type: text
+    default: ggmacp_dm_05
+    required: true
+database_user:
+    type: text
+    default: root
+    required: true
+database_password:
+    type: password
+    default: password
+    required: false
+mailer_transport:
+    type: text
+    default: smtp
+    required: true
+mailer_host:
+    type: text
+    default: 127.0.0.1
+    required: true
+mailer_user:
+    type: text
+    default: null
+    required: false
+mailer_password:
+    type: password
+    default: null
+    required: false
+locale:
+    type: locale
+    default: en
+    required: true
