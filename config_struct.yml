@@ -12,5 +12,5 @@ database_host:
     required: true
 database_port:
     type: integer
-    default: 3006
+    default: "3006"
     required: true
