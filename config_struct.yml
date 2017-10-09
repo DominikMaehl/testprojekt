@@ -43,6 +43,6 @@ mailer_password:
     default: null
     required: false
 locale:
-    type: locale
+    type: language
     default: en
     required: true
