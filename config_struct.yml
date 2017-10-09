@@ -1,13 +1,12 @@
-parameters:
-    database_driver:
-        type: text
-        default: pdo_mysql
-        required: false
-    database_path:
-        type: text
-        default: null
-        required: false
-    database_host:
-        type: text
-        default: localhoststs
-        required: true
+database_driver:
+    type: text
+    default: pdo_mysql
+    required: false
+database_path:
+    type: text
+    default: null
+    required: false
+database_host:
+    type: text
+    default: localhoststs
+    required: true
