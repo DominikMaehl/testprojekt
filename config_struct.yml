@@ -1,2 +1,3 @@
 parameters:
   database-port:3301
+  type: text
