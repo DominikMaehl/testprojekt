@@ -18,7 +18,7 @@ bootstrap_yml:
                             default: a
                         class:
                             type: text
-                            default: 'ggm\ArticleBundle\ggmArticleBundle'
+                            default: "ggm\ArticleBundle\ggmArticleBundle"
                 ggmClassifiedAdBundle:
                     type: bundle
                         enabled:
@@ -32,7 +32,7 @@ bootstrap_yml:
                             default: cad
                         class:
                             type: text
-                            default: 'ggm\ClassifiedAdBundle\ggmClassifiedAdBundle'
+                            default: "ggm\ClassifiedAdBundle\ggmClassifiedAdBundle"
                 ggmJobAdBundle:
                     type: bundle
                         enabled:
@@ -46,7 +46,7 @@ bootstrap_yml:
                             default: jobs
                         class:
                             type: text
-                            default: 'ggm\JobAdBundle\ggmJobAdBundle'
+                            default: "ggm\JobAdBundle\ggmJobAdBundle"
                 ggmNewsAgencyBundle:
                     type: bundle
                         enabled:
@@ -60,7 +60,7 @@ bootstrap_yml:
                             default: news-agency
                         class:
                             type: text
-                            default: 'ggm\NewsAgencyBundle\ggmNewsAgencyBundle'
+                            default: "ggm\NewsAgencyBundle\ggmNewsAgencyBundle"
                 ggmEventCalendarBundle:
                     type: bundle
                         enabled:
@@ -74,7 +74,7 @@ bootstrap_yml:
                             default: event
                         class:
                             type: text
-                            default: 'ggm\EventCalendarBundle\ggmEventCalendarBundle'
+                            default: "ggm\EventCalendarBundle\ggmEventCalendarBundle"
                 ggmCustomerBundle:
                     type: bundle
                         enabled:
@@ -88,7 +88,7 @@ bootstrap_yml:
                             default: null
                         class:
                             type: text
-                            default: '$ggm.theming.active_theme$\CustomerBundle\CustomerBundle'
+                            default: "$ggm.theming.active_theme$\CustomerBundle\CustomerBundle"
 parameters_yml:
     parameters:
         database_driver:
