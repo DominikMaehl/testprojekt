@@ -5,85 +5,84 @@ bootstrap_yml:
             default: funke_digital_meinanzeiger_de
         ggm.bootstrap.config:
             type: branch
-                ggmArticleBundle:
-                    type: bundle
-                        enabled:
-                            type: boolean
-                            default: false
-                        root:
-                            type: boolean
-                            default: false
-                        prefix:
-                            type: text
-                            default: a
-                        class:
-                            type: text
-                ggmClassifiedAdBundle:
-                    type: bundle
-                        enabled:
-                            type: boolean
-                            default: false
-                        root:
-                            type: boolean
-                            default: false
-                        prefix:
-                            type: text
-                            default: cad
-                        class:
-                            type: text
-                ggmJobAdBundle:
-                    type: bundle
-                        enabled:
-                            type: boolean
-                            default: false
-                        root:
-                            type: boolean
-                            default: false
-                        prefix:
-                            type: text
-                            default: jobs
-                        class:
-                            type: text
-                ggmNewsAgencyBundle:
-                    type: bundle
-                        enabled:
-                            type: boolean
-                            default: false
-                        root:
-                            type: boolean
-                            default: false
-                        prefix:
-                            type: text
-                            default: news-agency
-                        class:
-                            type: text
-                ggmEventCalendarBundle:
-                    type: bundle
-                        enabled:
-                            type: boolean
-                            default: false
-                        root:
-                            type: boolean
-                            default: false
-                        prefix:
-                            type: text
-                            default: event
-                        class:
-                            type: text
-                ggmCustomerBundle:
-                    type: bundle
-                        enabled:
-                            type: boolean
-                            default: false
-                        root:
-                            type: boolean
-                            default: false
-                        prefix:
-                            type: text
-                            default: null
-                        class:
-                            type: text
-                            
+            ggmArticleBundle:
+                type: bundle
+                enabled:
+                    type: boolean
+                    default: false
+                root:
+                    type: boolean
+                    default: false
+                prefix:
+                    type: text
+                    default: a
+                class:
+                    type: text
+            ggmClassifiedAdBundle:
+                type: bundle
+                enabled:
+                    type: boolean
+                    default: false
+                root:
+                    type: boolean
+                    default: false
+                prefix:
+                    type: text
+                    default: cad
+                class:
+                    type: text
+            ggmJobAdBundle:
+                type: bundle
+                enabled:
+                    type: boolean
+                    default: false
+                root:
+                    type: boolean
+                    default: false
+                prefix:
+                    type: text
+                    default: jobs
+                class:
+                    type: text
+            ggmNewsAgencyBundle:
+                type: bundle
+                enabled:
+                    type: boolean
+                    default: false
+                root:
+                    type: boolean
+                    default: false
+                prefix:
+                    type: text
+                    default: news-agency
+                class:
+                    type: text
+            ggmEventCalendarBundle:
+                type: bundle
+                enabled:
+                    type: boolean
+                    default: false
+                root:
+                    type: boolean
+                    default: false
+                prefix:
+                    type: text
+                    default: event
+                class:
+                    type: text
+            ggmCustomerBundle:
+                type: bundle
+                enabled:
+                    type: boolean
+                    default: false
+                root:
+                    type: boolean
+                    default: false
+                prefix:
+                    type: text
+                    default: null
+                class:
+                    type: text
 parameters_yml:
     parameters:
         database_driver:
