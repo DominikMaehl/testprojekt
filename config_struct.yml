@@ -1,44 +1,137 @@
-database_driver:
-    type: text
-    default: pdo_mysql
-    required: false
-database_path:
-    type: text
-    default: null
-    required: false
-database_host:
-    type: text
-    default: localhoststs
-    required: true
-database_port:
-    type: integer
-    default: 3306
-    required: true
-database_name:
-    type: text
-    default: ggmacp_dm_05
-    required: true
-database_user:
-    type: text
-    default: root
-    required: true
-database_password:
-    type: password
-    default: password
-    required: false
-mailer_transport:
-    type: text
-    default: smtp
-    required: true
-mailer_host:
-    type: text
-    default: 127.0.0.1
-    required: true
-mailer_user:
-    type: text
-    default: null
-    required: false
-mailer_password:
-    type: password
-    default: null
-    required: false
+bootstrap_yml:
+    parameters:
+        ggm.theming.active_theme:
+            type: text
+            default: funke_digital_meinanzeiger_de
+        ggm.bootstrap.config:
+            type: branch
+                ggmArticleBundle:
+                    type: bundle
+                        enabled:
+                            type: boolean
+                            default: false
+                        root:
+                            type: boolean
+                            default: false
+                        prefix:
+                            type: text
+                            default: a
+                        class:
+                            type: text
+                            default: ggm\ArticleBundle\ggmArticleBundle
+                ggmClassifiedAdBundle:
+                    type: bundle
+                        enabled:
+                            type: boolean
+                            default: false
+                        root:
+                            type: boolean
+                            default: false
+                        prefix:
+                            type: text
+                            default: cad
+                        class:
+                            type: text
+                            default: ggm\ClassifiedAdBundle\ggmClassifiedAdBundle
+                ggmJobAdBundle:
+                    type: bundle
+                        enabled:
+                            type: boolean
+                            default: false
+                        root:
+                            type: boolean
+                            default: false
+                        prefix:
+                            type: text
+                            default: jobs
+                        class:
+                            type: text
+                            default: ggm\JobAdBundle\ggmJobAdBundle
+                ggmNewsAgencyBundle:
+                    type: bundle
+                        enabled:
+                            type: boolean
+                            default: false
+                        root:
+                            type: boolean
+                            default: false
+                        prefix:
+                            type: text
+                            default: news-agency
+                        class:
+                            type: text
+                            default: ggm\NewsAgencyBundle\ggmNewsAgencyBundle
+                ggmEventCalendarBundle:
+                    type: bundle
+                        enabled:
+                            type: boolean
+                            default: false
+                        root:
+                            type: boolean
+                            default: false
+                        prefix:
+                            type: text
+                            default: event
+                        class:
+                            type: text
+                            default: ggm\EventCalendarBundle\ggmEventCalendarBundle
+                ggmCustomerBundle:
+                    type: bundle
+                        enabled:
+                            type: boolean
+                            default: false
+                        root:
+                            type: boolean
+                            default: false
+                        prefix:
+                            type: text
+                            default: null
+                        class:
+                            type: text
+                            default: $ggm.theming.active_theme$\CustomerBundle\CustomerBundle
+parameters_yml:
+    parameters:
+        database_driver:
+            type: text
+            default: pdo_mysql
+            required: false
+        database_path:
+            type: text
+            default: null
+            required: false
+        database_host:
+            type: text
+            default: localhoststs
+            required: true
+        database_port:
+            type: integer
+            default: 3306
+            required: true
+        database_name:
+            type: text
+            default: ggmacp_dm_05
+            required: true
+        database_user:
+            type: text
+            default: root
+            required: true
+        database_password:
+            type: password
+            default: password
+            required: false
+        mailer_transport:
+            type: text
+            default: smtp
+            required: true
+        mailer_host:
+            type: text
+            default: 127.0.0.1
+            required: true
+        mailer_user:
+            type: text
+            default: null
+            required: false
+        mailer_password:
+            type: password
+            default: null
+            required: false
