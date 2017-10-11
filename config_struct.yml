@@ -83,6 +83,7 @@ bootstrap_yml:
                             default: null
                         class:
                             type: text
+                            
 parameters_yml:
     parameters:
         database_driver:
