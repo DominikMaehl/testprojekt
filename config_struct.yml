@@ -23,16 +23,19 @@ bootstrap_yml:
                                         field-type: boolean
                                         field-default: false
                                         field-name: 'root'
+                                        required: true
                                     prefix:
                                         type: field
                                         field-type: text
                                         field-default: a
                                         field-name: 'prefix' 
+                                        required: true
                                     class:
                                         type: field
                                         field-type: text
                                         field-default: ggm\ArticleBundle\ggmArticleBundle
                                         field-name: 'class'
+                                        field-help: 'ggm\ArticleBundle\......\......'
                             ggmClassifiedAdBundle:
                                     type: title
                                     childs:
@@ -46,16 +49,19 @@ bootstrap_yml:
                                             field-type: boolean
                                             field-default: false
                                             field-name: 'root'
+                                            required: true
                                         prefix:
                                             type: field
                                             field-type: text
                                             field-default: a 
                                             field-name: 'prefix'
+                                            required: true
                                         class:
                                             type: field
                                             field-type: text
                                             field-default: ggm\ClassifiedAdBundle\ggmClassifiedAdBundle 
                                             field-name: 'class'
+                                            field-help: 'ggm\ClassifiedAdBundle\......\......'
                             ggmJobAdBundle:
                                     type: title
                                     childs:
@@ -69,11 +75,13 @@ bootstrap_yml:
                                             field-type: boolean
                                             field-default: false
                                             field-name: 'root'
+                                            required: true
                                         prefix:
                                             type: field
                                             field-type: text
                                             field-default: jobs
                                             field-name: 'prefix'
+                                            required: true
                                         class:
                                             type: field
                                             field-type: text
@@ -92,11 +100,13 @@ bootstrap_yml:
                                             field-type: boolean
                                             field-default: false
                                             field-name: 'root'
+                                            required: true
                                         prefix:
                                             type: field
                                             field-type: text
                                             field-default: news-agency
                                             field-name: 'prefix'
+                                            required: true
                                         class:
                                             type: field
                                             field-type: text
@@ -115,11 +125,13 @@ bootstrap_yml:
                                             field-type: boolean
                                             field-default: false
                                             field-name: 'root'
+                                            required: true
                                         prefix:
                                             type: field
                                             field-type: text
                                             field-default: event
                                             field-name: 'prefix'
+                                            required: true
                                         class:
                                             type: field
                                             field-type: text
@@ -138,11 +150,13 @@ bootstrap_yml:
                                             field-type: boolean
                                             field-default: false
                                             field-name: 'root'
+                                            required: true
                                         prefix:
                                             type: field
                                             field-type: text
                                             field-default: null
                                             field-name: 'prefix'
+                                            required: true
                                         class:
                                             type: field
                                             field-type: text
