@@ -115,7 +115,8 @@ bootstrap_yml:
                                         server:
                                             type: field
                                             field-type: collection
-                                            
+                                            field-default: Server
+                                            field-name: 'Server'
                             ggmEventCalendarBundle:
                                     type: title
                                     childs:
