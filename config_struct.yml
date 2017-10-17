@@ -1,21 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Explore
- @DominikMaehl
- Sign out
- Watch 0
-  Star 0  Fork 0 stephan24541/test-3
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
-Branch: master Find file Copy pathtest-3/config_struct.yml
-a5727f7  3 hours ago
-@stephan24541 stephan24541 Update config_struct.yml
-1 contributor
-RawBlameHistory     
-44 lines (43 sloc)  1.98 KB
 parameters_yml:
     filepath_for_config: '/paramet'
     parameters:
@@ -55,15 +37,3 @@ parameters_yml:
                                         field-type: text
                                         field-default: 1440
                                         field-name: 'expiretime'
-© 2017 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
-About
