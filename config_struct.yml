@@ -18,12 +18,12 @@ parameters_yml:
                                             type: field
                                             field-type: text
                                             field-default: 'www.example.com'
-                                            field-name: 'Adresse'
+                                            field-name: 'Serveradresse'
                                         port:
                                             type: field
                                             field-type: text
                                             field-default: '43473'
-                                            field-name: 'Adresse'
+                                            field-name: 'Serverport'
                             options:
                                 type: title
                                 childs:
