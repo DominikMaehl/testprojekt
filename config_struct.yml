@@ -1,169 +1,69 @@
-bootstrap_yml:
-            parameters:
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Explore
+ @DominikMaehl
+ Sign out
+ Watch 0
+  Star 0  Fork 0 stephan24541/test-3
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
+Branch: master Find file Copy pathtest-3/config_struct.yml
+a5727f7  3 hours ago
+@stephan24541 stephan24541 Update config_struct.yml
+1 contributor
+RawBlameHistory     
+44 lines (43 sloc)  1.98 KB
+parameters_yml:
+    filepath_for_config: '/paramet'
+    parameters:
+        type: title
+        childs:
+            ggm.global.session.config:
                 type: title
                 childs:
-                    ggm.theming.active_theme:
-                        type: field
-                        field-type: text
-                        field-default: funke_digital_meinanzeiger_de
-                        field-name: 'active theme'
-                    ggm.bootstrap.config:
+                    memcache:
                         type: title
-                        childs:
-                            ggmArticleBundle:
+                        childs:    
+                            servers:
+                                type: array
+                                array-type: collection
+                                array-keys: false
+                                array-childs:
+                                        fqdn:
+                                            type: field
+                                            field-type: text
+                                            field-default: 'www.example.com'
+                                            field-name: 'Adresse'
+                                        port:
+                                            type: field
+                                            field-type: text
+                                            field-default: '43473'
+                                            field-name: 'Adresse'
+                            options:
                                 type: title
                                 childs:
-                                    enabled:
-                                        type: field
-                                        field-type: boolean
-                                        field-default: false
-                                        field-name: 'enabled'
-                                    root:
-                                        type: field
-                                        field-type: boolean
-                                        field-default: false
-                                        field-name: 'root'
-                                        required: true
                                     prefix:
                                         type: field
                                         field-type: text
-                                        field-default: a
-                                        field-name: 'prefix' 
-                                        required: true
-                                    class:
+                                        field-default: CHANGEME
+                                        field-name: 'prefix'
+                                    expiretime:
                                         type: field
                                         field-type: text
-                                        field-default: ggm\ArticleBundle\ggmArticleBundle
-                                        field-name: 'class'
-                                        field-help: 'ggm\ArticleBundle\......\......'
-                            ggmClassifiedAdBundle:
-                                    type: title
-                                    childs:
-                                        enabled:
-                                            type: field
-                                            field-type: boolean
-                                            field-default: false
-                                            field-name: 'enabled'
-                                        root:
-                                            type: field
-                                            field-type: boolean
-                                            field-default: false
-                                            field-name: 'root'
-                                            required: true
-                                        prefix:
-                                            type: field
-                                            field-type: text
-                                            field-default: a 
-                                            field-name: 'prefix'
-                                            required: true
-                                        class:
-                                            type: field
-                                            field-type: text
-                                            field-default: ggm\ClassifiedAdBundle\ggmClassifiedAdBundle 
-                                            field-name: 'class'
-                                            field-help: 'ggm\ClassifiedAdBundle\......\......'
-                            ggmJobAdBundle:
-                                    type: title
-                                    childs:
-                                        enabled:
-                                            type: field
-                                            field-type: boolean
-                                            field-default: false
-                                            field-name: 'enabled'
-                                        root:
-                                            type: field
-                                            field-type: boolean
-                                            field-default: false
-                                            field-name: 'root'
-                                            required: true
-                                        prefix:
-                                            type: field
-                                            field-type: text
-                                            field-default: jobs
-                                            field-name: 'prefix'
-                                            required: true
-                                        class:
-                                            type: field
-                                            field-type: text
-                                            field-default: ggm\JobAdBundle\ggmJobAdBundle
-                                            field-name: 'class'
-                            ggmNewsAgencyBundle:
-                                    type: title
-                                    childs:
-                                        enabled:
-                                            type: field
-                                            field-type: boolean
-                                            field-default: false
-                                            field-name: 'enabled'
-                                        root:
-                                            type: field
-                                            field-type: boolean
-                                            field-default: false
-                                            field-name: 'root'
-                                            required: true
-                                        prefix:
-                                            type: field
-                                            field-type: text
-                                            field-default: news-agency
-                                            field-name: 'prefix'
-                                            required: true
-                                        class:
-                                            type: field
-                                            field-type: text
-                                            field-default: ggm\NewsAgencyBundle\ggmNewsAgencyBundle
-                                            field-name: 'class'
-                                        server:
-                                            type: field
-                                            field-type: collection
-                                            field-default: Server
-                                            field-name: 'Server'
-                            ggmEventCalendarBundle:
-                                    type: title
-                                    childs:
-                                        enabled:
-                                            type: field
-                                            field-type: boolean
-                                            field-default: false
-                                            field-name: 'enabled'
-                                        root:
-                                            type: field
-                                            field-type: boolean
-                                            field-default: false
-                                            field-name: 'root'
-                                            required: true
-                                        prefix:
-                                            type: field
-                                            field-type: text
-                                            field-default: event
-                                            field-name: 'prefix'
-                                            required: true
-                                        class:
-                                            type: field
-                                            field-type: text
-                                            field-default: ggm\EventCalendarBundle\ggmEventCalendarBundle
-                                            field-name: 'class'
-                            ggmCustomerBundle:
-                                    type: title
-                                    childs:
-                                        enabled:
-                                            type: field
-                                            field-type: boolean
-                                            field-default: false
-                                            field-name: 'enabled'
-                                        root:
-                                            type: field
-                                            field-type: boolean
-                                            field-default: false
-                                            field-name: 'root'
-                                            required: true
-                                        prefix:
-                                            type: field
-                                            field-type: text
-                                            field-default: null
-                                            field-name: 'prefix'
-                                            required: true
-                                        class:
-                                            type: field
-                                            field-type: text
-                                            field-default: ggm.theming.active_theme$\CustomerBundle\CustomerBundle
-                                            field-name: 'class'
+                                        field-default: 1440
+                                        field-name: 'expiretime'
+© 2017 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+API
+Training
+Shop
+Blog
+About
