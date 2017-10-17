@@ -112,6 +112,10 @@ bootstrap_yml:
                                             field-type: text
                                             field-default: ggm\NewsAgencyBundle\ggmNewsAgencyBundle
                                             field-name: 'class'
+                                        server:
+                                            type: field
+                                            field-type: collection
+                                            
                             ggmEventCalendarBundle:
                                     type: title
                                     childs:
