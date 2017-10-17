@@ -24,6 +24,24 @@ parameters_yml:
                                             field-type: text
                                             field-default: '43473'
                                             field-name: 'Serverport'
+                    memcache2:
+                        type: title
+                        childs:    
+                            servers:
+                                type: array
+                                array-type: collection
+                                array-keys: false
+                                array-childs:
+                                        fqdn:
+                                            type: field
+                                            field-type: text
+                                            field-default: 'www.example2.com'
+                                            field-name: 'Serveradresse2'
+                                        port:
+                                            type: field
+                                            field-type: text
+                                            field-default: '222222'
+                                            field-name: 'Serverport2'
                             options:
                                 type: title
                                 childs:
