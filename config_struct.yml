@@ -2,7 +2,7 @@ bootstrap.yml:
     parameters:
         ggm.theming.active_theme:
             type: text
-            default: '~'
+            default: test
         ggm.bootstrap.config:
             type: title
                 ggmArticleBundle:
