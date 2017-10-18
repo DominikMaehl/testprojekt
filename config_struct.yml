@@ -19,21 +19,25 @@ bootstrap.yml:
                         type: title
                         childs:
                             enabled:
+                                stage: 4
                                 type: field
                                 field-type: boolean
                                 field-default: false
                                 field-name: enabled
                             root:
+                                stage: 4
                                 type: field
                                 field-type: boolean
                                 field-default: false
                                 field-name: root
                             prefix:
+                                stage: 4
                                 type: field
                                 field-type: text
                                 field-default: a
                                 field-name: prefix
                             class:
+                                stage: 4
                                 type: field
                                 field-type: text
                                 field-default: 'ggm\ArticleBundle\ggmArticleBundle'
@@ -43,21 +47,25 @@ bootstrap.yml:
                         type: title
                         childs:
                                 enabled:
+                                    stage: 4
                                     type: field
                                     field-type: boolean
                                     field-default: false
                                     field-name: enabled
                                 root:
+                                    stage: 4
                                     type: field
                                     field-type: boolean
                                     field-default: false
                                     field-name: root
                                 prefix:
+                                    stage: 4
                                     type: field
                                     field-type: text
                                     field-default: cad
                                     field-name: prefix
                                 class:
+                                    stage: 4
                                     type: field
                                     field-type: text
                                     field-default: 'ggm\ClassifiedAdBundle\ggmClassifiedAdBundle'
@@ -67,21 +75,25 @@ bootstrap.yml:
                         type: title
                         childs:
                                 enabled:
+                                    stage: 4
                                     type: field
                                     field-type: boolean
                                     field-default: false
                                     field-name: enabled
                                 root:
+                                    stage: 4
                                     type: field
                                     field-type: boolean
                                     field-default: false
                                     field-name: root
                                 prefix:
+                                    stage: 4
                                     type: field
                                     field-type: text
                                     field-default: jobs
                                     field-name: prefix
                                 class:
+                                    stage: 4
                                     type: field
                                     field-type: text
                                     field-default: 'ggm\JobAdBundle\ggmJobAdBundle'
@@ -91,21 +103,25 @@ bootstrap.yml:
                         type: title
                         childs:
                                 enabled:
+                                    stage: 4
                                     type: field
                                     field-type: boolean
                                     field-default: false
                                     field-name: enabled
                                 root:
+                                    stage: 4
                                     type: field
                                     field-type: boolean
                                     field-default: false
                                     field-name: root
                                 prefix:
+                                    stage: 4
                                     type: field
                                     field-type: text
                                     field-default: news-agency
                                     field-name: prefix
                                 class:
+                                    stage: 4
                                     type: field
                                     field-type: text
                                     field-default: 'ggm\NewsAgencyBundle\ggmNewsAgencyBundle'
@@ -115,21 +131,25 @@ bootstrap.yml:
                         type: title
                         childs:
                                 enabled:
+                                    stage: 4
                                     type: field
                                     field-type: boolean
                                     field-default: false
                                     field-name: enabled
                                 root:
+                                    stage: 4
                                     type: field
                                     field-type: boolean
                                     field-default: false
                                     field-name: root
                                 prefix:
+                                    stage: 4
                                     type: field
                                     field-type: text
                                     field-default: event
                                     field-name: prefix
                                 class:
+                                    stage: 4
                                     type: field
                                     field-type: text
                                     field-default: 'ggm\EventCalendarBundle\ggmEventCalendarBundle'
@@ -139,21 +159,25 @@ bootstrap.yml:
                         type: title
                         childs:
                                 enabled:
+                                    stage: 4
                                     type: field
                                     field-type: boolean
                                     field-default: false
                                     field-name: enabled
                                 root:
+                                    stage: 4
                                     type: field
                                     field-type: boolean
                                     field-default: false
                                     field-name: root
                                 prefix:
+                                    stage: 4
                                     type: field
                                     field-type: text
                                     field-default:
                                     field-name: prefix
                                 class:
+                                    stage: 4
                                     type: field
                                     field-type: text
                                     field-default: '$ggm.theming.active_theme$\CustomerBundle\CustomerBundle'
