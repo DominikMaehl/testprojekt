@@ -1,57 +1,91 @@
-parameters_yml:
-    filepath_for_config: '/paramet'
+bootstrap.yml:
     parameters:
-        type: title
-        childs:
-            ggm.global.session.config:
-                type: title
-                childs:
-                    memcache:
-                        type: title
-                        childs:    
-                            servers:
-                                type: array
-                                array-type: collection
-                                array-keys: false
-                                array-childs:
-                                        fqdn:
-                                            type: field
-                                            field-type: text
-                                            field-default: 'www.example.com'
-                                            field-name: 'Serveradresse'
-                                        port:
-                                            type: field
-                                            field-type: text
-                                            field-default: '43473'
-                                            field-name: 'Serverport'
-                    memcache2:
-                        type: title
-                        childs:    
-                            servers:
-                                type: array
-                                array-type: collection
-                                array-keys: false
-                                array-childs:
-                                        fqdn:
-                                            type: field
-                                            field-type: text
-                                            field-default: 'www.example2.com'
-                                            field-name: 'Serveradresse2'
-                                        port:
-                                            type: field
-                                            field-type: text
-                                            field-default: '222222'
-                                            field-name: 'Serverport2'
-                            options:
-                                type: title
-                                childs:
-                                    prefix:
-                                        type: field
-                                        field-type: text
-                                        field-default: CHANGEME
-                                        field-name: 'prefix'
-                                    expiretime:
-                                        type: field
-                                        field-type: text
-                                        field-default: 1440
-                                        field-name: 'expiretime'
+        ggm.theming.active_theme:
+            type: text
+            default: ~
+        ggm.bootstrap.config:
+            type: title
+                ggmArticleBundle:
+                    type: title
+                    enabled:
+                        type: boolean
+                        default: false
+                    root:
+                        type: boolean
+                        default: false
+                    prefix:
+                        type: text
+                        default: a
+                    class:
+                        type: text
+                        default: 'ggm\ArticleBundle\ggmArticleBundle'
+                ggmClassifiedAdBundle:
+                    type: bundle
+                    enabled:
+                        type: boolean
+                        default: false
+                    root:
+                        type: boolean
+                        default: false
+                    prefix:
+                        type: text
+                        default: cad
+                    class:
+                        type: text
+                        default: 'ggm\ClassifiedAdBundle\ggmClassifiedAdBundle'
+                ggmJobAdBundle:
+                    type: bundle
+                    enabled:
+                        type: boolean
+                        default: false
+                    root:
+                        type: boolean
+                        default: false
+                    prefix:
+                        type: text
+                        default: jobs
+                    class:
+                        type: text
+                        default: 'ggm\JobAdBundle\ggmJobAdBundle'
+                ggmNewsAgencyBundle:
+                    type: bundle
+                    enabled:
+                        type: boolean
+                        default: false
+                    root:
+                        type: boolean
+                        default: false
+                    prefix:
+                        type: text
+                        default: news-agency
+                    class:
+                        type: text
+                        default: 'ggm\NewsAgencyBundle\ggmNewsAgencyBundle'
+                ggmEventCalendarBundle:
+                    type: bundle
+                    enabled:
+                        type: boolean
+                        default: false
+                    root:
+                        type: boolean
+                        default: false
+                    prefix:
+                        type: text
+                        default: event
+                    class:
+                        type: text
+                        default: 'ggm\EventCalendarBundle\ggmEventCalendarBundle'
+                ggmCustomerBundle:
+                    type: bundle
+                    enabled:
+                        type: boolean
+                        default: false
+                    root:
+                        type: boolean
+                        default: false
+                    prefix:
+                        type: text
+                        default: null
+                    class:
+                        type: text
+                        default: '$ggm.theming.active_theme$\CustomerBundle\CustomerBundle'
