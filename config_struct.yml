@@ -88,4 +88,3 @@ bootstrap.yml:
                         default: null
                     class:
                         type: text
-                        default: '$ggm.theming.active_theme$\CustomerBundle\CustomerBundle'
