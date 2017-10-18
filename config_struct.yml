@@ -1,5 +1,5 @@
 bootstrap.yml:
-    filepath_for_config: 'app/config/parameters.yml'
+    filepath_for_config: 'app/config/bootstrap.yml'
     parameters:
         stage: 1
         type: title
@@ -182,3 +182,91 @@ bootstrap.yml:
                                     field-type: text
                                     field-default: '$ggm.theming.active_theme$\CustomerBundle\CustomerBundle'
                                     field-name: class
+parameters.yml:
+    filepath_for_config: 'app/config/parameters.yml'
+    parameters:
+        stage: 1
+        type: title
+        childs:
+            # Assetic Settings
+            assetic.filters.sass.bin:
+                stage: 2
+                type: field
+                field-type: text
+                field-default: '/usr/local/bin/sass'
+                field-name: assetic filters sass bin
+            assetic.ruby:
+                stage: 2
+                type: field
+                field-type: text
+                field-default: '/usr/bin/ruby'
+                field-name: assetic ruby
+            # Database Settings
+            database_driver:
+                stage: 2
+                type: field
+                field-type: text
+                field-default: pdo_mysql
+                field-name: database driver
+            database_path:
+                stage: 2
+                type: field
+                field-type: text
+                field-default:
+                field-name: database path
+            # Database Master
+            database_host:
+                stage: 2
+                type: field
+                field-type: text
+                field-default: '~'
+                field-name: database host
+            database_port:
+                stage: 2
+                type: field
+                field-type: integer
+                field-default: 3306
+                field-name: database port
+            database_name:
+                stage: 2
+                type: field
+                field-type: text
+                field-default: '~'
+                field-name: database name
+            database_user:
+                stage: 2
+                type: field
+                field-type: text
+                field-default: '~'
+                field-name: database user
+            database_password:
+                stage: 2
+                type: field
+                field-type: text
+                field-default: '~'
+                field-name: database password
+            # Mail Settings
+            mailer_transport:
+                stage: 2
+                type: field
+                field-type: text
+                field-default: smtp
+                field-name: mailer transport
+            mailer_host:
+                stage: 2
+                type: field
+                field-type: text
+                field-default: 127.0.0.1
+                field-name: mailer_host
+            mailer_user:
+                stage: 2
+                type: field
+                field-type: text
+                field-default:
+                field-name: mailer_user
+            mailer_password:
+                stage: 2
+                type: field
+                field-type: text
+                field-default:
+                field-name: mailer_password
