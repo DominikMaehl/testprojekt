@@ -1,21 +1,21 @@
 bootstrap.yml:
     filepath_for_config: 'app/config/parameters.yml'
     parameters:
-	stage: 1
+	    stage: 1
         type: title
         childs:
             ggm.theming.active_theme:
-		stage: 2
+		        stage: 2
                 type: field
                 field-type: text
                 field-default: '~'
                 field-name: active_theme
             ggm.bootstrap.config:
-		stage: 2
+		        stage: 2
                 type: title
                 childs:
                     ggmArticleBundle:
-			stage: 3
+			            stage: 3
                         type: title
                         childs:
                             enabled:
@@ -39,7 +39,7 @@ bootstrap.yml:
                                 field-default: 'ggm\ArticleBundle\ggmArticleBundle'
                                 field-name: class
                     ggmClassifiedAdBundle:
-			stage: 3
+			            stage: 3
                         type: title
                         childs:
                                 enabled:
@@ -63,7 +63,7 @@ bootstrap.yml:
                                     field-default: 'ggm\ClassifiedAdBundle\ggmClassifiedAdBundle'
                                     field-name: class
                     ggmJobAdBundle:
-			stage: 3
+			            stage: 3
                         type: title
                         childs:
                                 enabled:
@@ -87,7 +87,7 @@ bootstrap.yml:
                                     field-default: 'ggm\JobAdBundle\ggmJobAdBundle'
                                     field-name: class
                     ggmNewsAgencyBundle:
-			stage: 3
+			            stage: 3
                         type: title
                         childs:
                                 enabled:
@@ -111,7 +111,7 @@ bootstrap.yml:
                                     field-default: 'ggm\NewsAgencyBundle\ggmNewsAgencyBundle'
                                     field-name: class
                     ggmEventCalendarBundle:
-			stage: 3
+			            stage: 3
                         type: title
                         childs:
                                 enabled:
@@ -135,7 +135,7 @@ bootstrap.yml:
                                     field-default: 'ggm\EventCalendarBundle\ggmEventCalendarBundle'
                                     field-name: class
                     ggmCustomerBundle:
-			stage: 3
+			            stage: 3
                         type: title
                         childs:
                                 enabled:
