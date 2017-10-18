@@ -2,7 +2,7 @@ bootstrap.yml:
     parameters:
         ggm.theming.active_theme:
             type: text
-            default: ~
+            default: '~'
         ggm.bootstrap.config:
             type: title
                 ggmArticleBundle:
@@ -20,7 +20,7 @@ bootstrap.yml:
                         type: text
                         default: 'ggm\ArticleBundle\ggmArticleBundle'
                 ggmClassifiedAdBundle:
-                    type: bundle
+                    type: title
                     enabled:
                         type: boolean
                         default: false
@@ -34,7 +34,7 @@ bootstrap.yml:
                         type: text
                         default: 'ggm\ClassifiedAdBundle\ggmClassifiedAdBundle'
                 ggmJobAdBundle:
-                    type: bundle
+                    type: title
                     enabled:
                         type: boolean
                         default: false
@@ -48,7 +48,7 @@ bootstrap.yml:
                         type: text
                         default: 'ggm\JobAdBundle\ggmJobAdBundle'
                 ggmNewsAgencyBundle:
-                    type: bundle
+                    type: title
                     enabled:
                         type: boolean
                         default: false
@@ -62,7 +62,7 @@ bootstrap.yml:
                         type: text
                         default: 'ggm\NewsAgencyBundle\ggmNewsAgencyBundle'
                 ggmEventCalendarBundle:
-                    type: bundle
+                    type: title
                     enabled:
                         type: boolean
                         default: false
@@ -76,7 +76,7 @@ bootstrap.yml:
                         type: text
                         default: 'ggm\EventCalendarBundle\ggmEventCalendarBundle'
                 ggmCustomerBundle:
-                    type: bundle
+                    type: title
                     enabled:
                         type: boolean
                         default: false
