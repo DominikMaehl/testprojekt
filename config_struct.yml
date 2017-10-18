@@ -3,8 +3,10 @@ bootstrap.yml:
         type: title
         childs:
             ggm.theming.active_theme:
-                type: text
-                default: '~'
+                type: field
+                field-type: text
+                field-default: '~'
+                field-name: active_theme
             ggm.bootstrap.config:
                 type: title
                 childs:
@@ -12,89 +14,137 @@ bootstrap.yml:
                         type: title
                         childs:
                             enabled:
-                                type: boolean
-                                default: false
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: enabled
                             root:
-                                type: boolean
-                                default: false
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: root
                             prefix:
-                                type: text
-                                default: a
+                                type: field
+                                field-type: text
+                                field-default: a
+                                field-name: prefix
                             class:
-                                type: text
-                                default: 'ggm\ArticleBundle\ggmArticleBundle'
+                                type: field
+                                field-type: text
+                                field-default: 'ggm\ArticleBundle\ggmArticleBundle'
+                                field-name: class
                 ggmClassifiedAdBundle:
                     type: title
                     childs:
-                        enabled:
-                            type: boolean
-                            default: false
-                        root:
-                            type: boolean
-                            default: false
-                        prefix:
-                            type: text
-                            default: cad
-                        class:
-                            type: text
-                            default: 'ggm\ClassifiedAdBundle\ggmClassifiedAdBundle'
+                            enabled:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: enabled
+                            root:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: root
+                            prefix:
+                                type: field
+                                field-type: text
+                                field-default: cad
+                                field-name: prefix
+                            class:
+                                type: field
+                                field-type: text
+                                field-default: 'ggm\ClassifiedAdBundle\ggmClassifiedAdBundle'
+                                field-name: class
                 ggmJobAdBundle:
                     type: title
                     childs:
-                        enabled:
-                            type: boolean
-                            default: false
-                        root:
-                            type: boolean
-                            default: false
-                        prefix:
-                            type: text
-                            default: jobs
-                        class:
-                            type: text
-                            default: 'ggm\JobAdBundle\ggmJobAdBundle'
+                            enabled:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: enabled
+                            root:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: root
+                            prefix:
+                                type: field
+                                field-type: text
+                                field-default: jobs
+                                field-name: prefix
+                            class:
+                                type: field
+                                field-type: text
+                                field-default: 'ggm\JobAdBundle\ggmJobAdBundle'
+                                field-name: class
                 ggmNewsAgencyBundle:
                     type: title
                     childs:
-                        enabled:
-                            type: boolean
-                            default: false
-                        root:
-                            type: boolean
-                            default: false
-                        prefix:
-                            type: text
-                            default: news-agency
-                        class:
-                            type: text
-                            default: 'ggm\NewsAgencyBundle\ggmNewsAgencyBundle'
+                            enabled:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: enabled
+                            root:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: root
+                            prefix:
+                                type: field
+                                field-type: text
+                                field-default: news-agency
+                                field-name: prefix
+                            class:
+                                type: field
+                                field-type: text
+                                field-default: 'ggm\NewsAgencyBundle\ggmNewsAgencyBundle'
+                                field-name: class
                 ggmEventCalendarBundle:
                     type: title
                     childs:
-                        enabled:
-                            type: boolean
-                            default: false
-                        root:
-                            type: boolean
-                            default: false
-                        prefix:
-                            type: text
-                            default: event
-                        class:
-                            type: text
-                            default: 'ggm\EventCalendarBundle\ggmEventCalendarBundle'
+                            enabled:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: enabled
+                            root:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: root
+                            prefix:
+                                type: field
+                                field-type: text
+                                field-default: event
+                                field-name: prefix
+                            class:
+                                type: field
+                                field-type: text
+                                field-default: 'ggm\EventCalendarBundle\ggmEventCalendarBundle'
+                                field-name: class
                 ggmCustomerBundle:
                     type: title
                     childs:
-                        enabled:
-                            type: boolean
-                            default: false
-                        root:
-                            type: boolean
-                            default: false
-                        prefix:
-                            type: text
-                            default: null
-                        class:
-                            type: text
-                            default: '$ggm.theming.active_theme$\CustomerBundle\CustomerBundle'
+                            enabled:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: enabled
+                            root:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: root
+                            prefix:
+                                type: field
+                                field-type: text
+                                field-default: null
+                                field-name: prefix
+                            class:
+                                type: field
+                                field-type: text
+                                field-default: '$ggm.theming.active_theme$\CustomerBundle\CustomerBundle'
+                                field-name: class
