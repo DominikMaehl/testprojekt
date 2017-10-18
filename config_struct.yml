@@ -1,4 +1,5 @@
 bootstrap.yml:
+    filepath_for_config: 'app/config/parameters.yml'
     parameters:
         type: title
         childs:
