@@ -316,6 +316,7 @@ parameters.yml:
                                 type: array
                                 array-type: collection
                                 array-keys: false
+                                array-max: 5
                                 childs:
                                     fqdn:
                                         type: field
