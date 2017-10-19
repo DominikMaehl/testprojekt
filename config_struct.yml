@@ -270,3 +270,182 @@ parameters.yml:
                 field-type: text
                 field-default:
                 field-name: mailer_password
+            # Framework Settings
+            framework.translator.fallback_locale:
+                stage: 2
+                type: field
+                field-type: text
+                field-default: en
+                field-name: framework translator fallback locale
+            framework.default_locale:
+                stage: 2
+                type: field
+                field-type: text
+                field-default: en_US.UTF-8
+                field-name: framework default locale
+            framework.secret:
+                stage: 2
+                type: field
+                field-type: text
+                field-default: 9ab5cb670f02031674e24231026a9e4f2
+                field-name: framework secret
+            # AssetsVersion
+            assets_version:
+                stage: 2
+                type: field
+                field-type: text
+                field-default:
+                field-name: assets version
+            # global
+            ggm.global.session.handler:
+                stage: 2
+                type: field
+                field-type: text
+                field-default: 'memcache'
+                field-name: ggm global session handler
+            ggm.global.session.handler:
+                stage: 2
+                type: title
+                childs:
+                    memcache:
+                        stage: 3
+                        type: title
+                        childs:
+                            servers:
+                                stage: 4
+                                type: array
+                                array-type: collection
+                                array-keys: false
+                                array-childs:
+                                    fqdn:
+                                        stage: 5
+                                        type: field
+                                        field-type: text
+                                        field-default: 'angrod.gogol-medien.local'
+                                        field-name: server
+                                    port:
+                                        stage: 5
+                                        type: field
+                                        field-type: text
+                                        field-default: 11211
+                                        field-name: port
+                            options:
+                                stage: 4
+                                type: title
+                                childs:
+                                    prefix:
+                                        type: field
+                                        field-type: text
+                                        field-default: CHANGEME
+                                        field-name: 'prefix'
+                                    expiretime:
+                                        type: field
+                                        field-type: text
+                                        field-default: 1440
+                                        field-name: 'expiretime'
+            ggm.global.root_route:
+                stage: 2
+                type: field
+                field-type: text
+                field-default: '~'
+                field-name: ggm global root route
+            ggm.global.phone_country_codes:
+                stage: 2
+                type: field
+                field-type: text
+                field-default: "DE: '+49'"
+                field-name: ggm global phone country codes
+            ggm.global.google:
+                stage: 2
+                type: title
+                childs:
+                    api_key:
+                        stage: 3
+                        type: field
+                        field-type: text
+                        field-default: '~'
+                        field-name: api key
+                    maps:
+                        stage: 3
+                        type: title
+                        childs:
+                            default_lat:
+                                stage: 4
+                                type: field
+                                field-type: text
+                                field-default: '~'
+                                field-name: default lat
+                            default_lng:
+                                stage: 4
+                                type: field
+                                field-type: text
+                                field-default: '~'
+                                field-name: default lng
+                            default_zoom:
+                                stage: 4
+                                type: field
+                                field-type: text
+                                field-default: '~'
+                                field-name: default zoom
+            ggm.global.email:
+                stage: 2
+                type: title
+                childs:
+                    adress:
+                        stage: 3
+                        type: field
+                        field-type: email
+                        field-default: webmaster@example.com
+                        field-name: adress
+                    sender_name:
+                        stage: 3
+                        type: field
+                        field-type: text
+                        field-default: webmaster
+                        field-name: sender name
+            ggm.global.report:
+                stage: 2
+                type: title
+                childs:
+                    enabled:
+                        stage: 3
+                        type: field
+                        field-type: boolean
+                        field-default: false
+                        field-name: enabled
+                    delivery_email:
+                        stage: 3
+                        type: field
+                        field-type: email
+                        field-default: webmaster@example.com
+                        field-name: delivery email
+            ggm.global.feedback:
+                stage: 2
+                type: title
+                childs:
+                    enabled:
+                        stage: 3
+                        type: field
+                        field-type: boolean
+                        field-default: false
+                        field-name: enabled
+                    delivery_email:
+                        stage: 3
+                        type: field
+                        field-type: text
+                        field-default: webmaster@example.com
+                        field-name: delivery email
+            # portal_domain (temporary rma specific)
+            portal_domain:
+                stage: 2
+                type: field
+                field-type: text
+                field-default: '~'
+                field-name: portal domain (rma specific)
+            # media bundle
+            ggm_media.imagemagick_bin:
+                stage: 2
+                type: field
+                field-type: text
+                field-default: /usr/bin/convert
+                field-name: ggm media imagemagick bin
