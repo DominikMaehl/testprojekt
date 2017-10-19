@@ -629,37 +629,37 @@ parameters.yml:
                         field-default: '~'
                         field-name: custom redirect service
             # Paid Services
-            service_fees:
-                stage: 2
-                type: array
-                array-type: collection
-                array-keys: true
-                array-max: 5
-                childs:
-                    regular:
-                        stage: 3
-                        type: array
-                        array-type: collection
-                        array-keys: false
-                        array-max: 5
-                        childs:
-                            stage: 4
-                            type: field
-                            field-type: text
-                            field-default: ~
-                            field-name: regular
-                    commercial:
-                        stage: 3
-                        type: array
-                        array-type: collection
-                        array-keys: false
-                        array-max: 5
-                        childs:
-                            stage: 4
-                            type: field
-                            field-type: text
-                            field-default: ~
-                            field-name: commercial
+#            service_fees:
+#                stage: 2
+#                type: array
+#                array-type: collection
+#                array-keys: true
+#                array-max: 5
+#                childs:
+#                    regular:
+#                        stage: 3
+#                        type: array
+#                        array-type: collection
+#                        array-keys: false
+#                        array-max: 5
+#                        childs:
+#                            stage: 4
+#                            type: field
+#                            field-type: text
+#                            field-default: ~
+#                            field-name: regular
+#                    commercial:
+#                        stage: 3
+#                        type: array
+#                        array-type: collection
+#                        array-keys: false
+#                        array-max: 5
+#                        childs:
+#                            stage: 4
+#                            type: field
+#                            field-type: text
+#                            field-default: ~
+#                            field-name: commercial
             # ggm_job_ad
             ggm.jobad.config:
                 stage: 2
