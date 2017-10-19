@@ -317,16 +317,38 @@ parameters.yml:
                                 array-type: collection
                                 array-keys: false
                                 array-childs:
-                                    fqdn:
-                                        type: field
-                                        field-type: text
-                                        field-default: 'angrod.gogol-medien.local'
-                                        field-name: server
-                                    port:
-                                        type: field
-                                        field-type: text
-                                        field-default: 11211
-                                        field-name: port
+                                    server1:
+                                        stage: 5
+                                        type: array
+                                        array-type: collection
+                                        array-keys: false
+                                        array-childs:
+                                            fqdn:
+                                                type: field
+                                                field-type: text
+                                                field-default: 'angrod.gogol-medien.local'
+                                                field-name: server
+                                            port:
+                                                type: field
+                                                field-type: text
+                                                field-default: 11211
+                                                field-name: port
+                                    server2:
+                                        stage: 5
+                                        type: array
+                                        array-type: collection
+                                        array-keys: false
+                                        array-childs:
+                                            fqdn:
+                                                type: field
+                                                field-type: text
+                                                field-default: 'aragorn.gogol-medien.local'
+                                                field-name: server
+                                            port:
+                                                type: field
+                                                field-type: text
+                                                field-default: 11211
+                                                field-name: port
                             options:
                                 stage: 4
                                 type: title
