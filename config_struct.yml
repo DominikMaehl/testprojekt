@@ -334,11 +334,13 @@ parameters.yml:
                                 type: title
                                 childs:
                                     prefix:
+                                        stage: 5
                                         type: field
                                         field-type: text
                                         field-default: CHANGEME
                                         field-name: 'prefix'
                                     expiretime:
+                                        stage: 5
                                         type: field
                                         field-type: text
                                         field-default: 1440
