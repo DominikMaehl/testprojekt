@@ -483,103 +483,102 @@ parameters.yml:
                         field-type: text
                         field-default: '~'
                         field-name: remote storages
-              # ClassifiedAdBundle
-              ggm.classifiedad.advert:
-                  stage: 2
-                  type: title
-                  childs:
-                      approval:
-                          stage: 3
-                          type: field
-                          field-type: text
-                          field-default: direct
-                          field-name: approval
-                      print_optional:
-                          stage: 3
-                          type: field
-                          field-type: boolean
-                          field-default: false
-                          field-name: print optional
-                      print_consecutive_max:
-                          stage: 3
-                          type: field
-                          field-type: integer
-                          field-default: 1
-                          field-name: print consecutive max
-                      anonymous_adverts_enable:
-                          stage: 3
-                          type: field
-                          field-type: boolean
-                          field-default: true
-                          field-name: anonymous adverts enable
-                      commercial_type_enabled:
-                          stage: 3
-                          type: field
-                          field-type: boolean
-                          field-default: false
-                          field-name: commercial type enabled
-                      print_description_minlen:
-                          stage: 3
-                          type: field
-                          field-type: integer
-                          field-default: 16
-                          field-name: print description minlen
-                      print_description_maxlen:
-                          stage: 3
-                          type: field
-                          field-type: integer
-                          field-default: 280
-                          field-name: print description maxlen
-                      print_options:
-                          stage: 3
-                          type: field
-                          field-type: text
-                          field-default: '~'
-                          field-name: print options
-                      print_product_list:
-                          stage: 3
-                          type: field
-                          field-type: text
-                          field-default: grouped
-                          field-name: print product list
-                      show_aggregations_counter:
-                          stage: 3
-                          type: field
-                          field-type: boolean
-                          field-default: false
-                          field-name: show aggregations counter
-                      hide_zero_aggregations:
-                          stage: 3
-                          type: field
-                          field-type: boolean
-                          field-default: true
-                          field-name: hide zero aggregations
-                      confirm_step_checkboxes:
-                          stage: 3
-                          type: field
-                          field-type: text
-                          field-default: "['accept_terms_of_service']"
-                          field-name: confirm step checkboxes
-              ggm.classifiedad.email:
-                  stage: 2
-                  type: title
-                  childs:
-                      from_email:
-                          stage: 3
-                          type: field
-                          field-type: email
-                          field-default: webmaster@example.com
-                          field-name: from email
-                      advert_notification_enabled:
-                          stage: 3
-                          type: field
-                          field-type: boolean
-                          field-default: false
-                          field-name: advert notification enabled
-                      custom_redirect_service:
-                          stage: 3
-                          type: field
-                          field-type: email
-                          field-default: webmaster@example.com
-                          field-name: custom redirect service
-                      
+            # ClassifiedAdBundle
+            ggm.classifiedad.advert:
+                stage: 2
+                type: title
+                childs:
+                    approval:
+                        stage: 3
+                        type: field
+                        field-type: text
+                        field-default: direct
+                        field-name: approval
+                    print_optional:
+                        stage: 3
+                        type: field
+                        field-type: boolean
+                        field-default: false
+                        field-name: print optional
+                    print_consecutive_max:
+                        stage: 3
+                        type: field
+                        field-type: integer
+                        field-default: 1
+                        field-name: print consecutive max
+                    anonymous_adverts_enable:
+                        stage: 3
+                        type: field
+                        field-type: boolean
+                        field-default: true
+                        field-name: anonymous adverts enable
+                    commercial_type_enabled:
+                        stage: 3
+                        type: field
+                        field-type: boolean
+                        field-default: false
+                        field-name: commercial type enabled
+                    print_description_minlen:
+                        stage: 3
+                        type: field
+                        field-type: integer
+                        field-default: 16
+                        field-name: print description minlen
+                    print_description_maxlen:
+                        stage: 3
+                        type: field
+                        field-type: integer
+                        field-default: 280
+                        field-name: print description maxlen
+                    print_options:
+                        stage: 3
+                        type: field
+                        field-type: text
+                        field-default: '~'
+                        field-name: print options
+                    print_product_list:
+                        stage: 3
+                        type: field
+                        field-type: text
+                        field-default: grouped
+                        field-name: print product list
+                    show_aggregations_counter:
+                        stage: 3
+                        type: field
+                        field-type: boolean
+                        field-default: false
+                        field-name: show aggregations counter
+                    hide_zero_aggregations:
+                        stage: 3
+                        type: field
+                        field-type: boolean
+                        field-default: true
+                        field-name: hide zero aggregations
+                    confirm_step_checkboxes:
+                        stage: 3
+                        type: field
+                        field-type: text
+                        field-default: "['accept_terms_of_service']"
+                        field-name: confirm step checkboxes
+            ggm.classifiedad.email:
+                stage: 2
+                type: title
+                childs:
+                    from_email:
+                        stage: 3
+                        type: field
+                        field-type: email
+                        field-default: webmaster@example.com
+                        field-name: from email
+                    advert_notification_enabled:
+                        stage: 3
+                        type: field
+                        field-type: boolean
+                        field-default: false
+                        field-name: advert notification enabled
+                    custom_redirect_service:
+                        stage: 3
+                        type: field
+                        field-type: email
+                        field-default: webmaster@example.com
+                        field-name: custom redirect service
