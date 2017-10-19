@@ -352,10 +352,17 @@ parameters.yml:
                 field-name: ggm global root route
             ggm.global.phone_country_codes:
                 stage: 2
-                type: field
-                field-type: text
-                field-default: "DE: '+49'"
-                field-name: ggm global phone country codes
+                type: array
+                array-type: collection
+                array-keys: true
+                array-max: 5
+                childs:
+                    DE:
+                        stage: 3
+                        type: field
+                        field-type: text
+                        field-default: '+49'
+                        field-name: country codes
             ggm.global.google:
                 stage: 2
                 type: title
@@ -566,7 +573,7 @@ parameters.yml:
                                 stage: 4
                                 type: field
                                 field-type: text
-                                field-default: "['accept_terms_of_service']"
+                                field-default: "[accept_terms_of_service]"
                                 field-name: name
             ggm.classifiedad.email:
                 stage: 2
