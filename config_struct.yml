@@ -46,142 +46,142 @@ bootstrap.yml:
                         stage: 3
                         type: title
                         childs:
-                                enabled:
-                                    stage: 4
-                                    type: field
-                                    field-type: boolean
-                                    field-default: false
-                                    field-name: enabled
-                                root:
-                                    stage: 4
-                                    type: field
-                                    field-type: boolean
-                                    field-default: false
-                                    field-name: root
-                                prefix:
-                                    stage: 4
-                                    type: field
-                                    field-type: text
-                                    field-default: cad
-                                    field-name: prefix
-                                class:
-                                    stage: 4
-                                    type: field
-                                    field-type: text
-                                    field-default: 'ggm\ClassifiedAdBundle\ggmClassifiedAdBundle'
-                                    field-name: class
+                            enabled:
+                                stage: 4
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: enabled
+                            root:
+                                stage: 4
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: root
+                            prefix:
+                                stage: 4
+                                type: field
+                                field-type: text
+                                field-default: cad
+                                field-name: prefix
+                            class:
+                                stage: 4
+                                type: field
+                                field-type: text
+                                field-default: 'ggm\ClassifiedAdBundle\ggmClassifiedAdBundle'
+                                field-name: class
                     ggmJobAdBundle:
                         stage: 3
                         type: title
                         childs:
-                                enabled:
-                                    stage: 4
-                                    type: field
-                                    field-type: boolean
-                                    field-default: false
-                                    field-name: enabled
-                                root:
-                                    stage: 4
-                                    type: field
-                                    field-type: boolean
-                                    field-default: false
-                                    field-name: root
-                                prefix:
-                                    stage: 4
-                                    type: field
-                                    field-type: text
-                                    field-default: jobs
-                                    field-name: prefix
-                                class:
-                                    stage: 4
-                                    type: field
-                                    field-type: text
-                                    field-default: 'ggm\JobAdBundle\ggmJobAdBundle'
-                                    field-name: class
+                            enabled:
+                                stage: 4
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: enabled
+                            root:
+                                stage: 4
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: root
+                            prefix:
+                                stage: 4
+                                type: field
+                                field-type: text
+                                field-default: jobs
+                                field-name: prefix
+                            class:
+                                stage: 4
+                                type: field
+                                field-type: text
+                                field-default: 'ggm\JobAdBundle\ggmJobAdBundle'
+                                field-name: class
                     ggmNewsAgencyBundle:
                         stage: 3
                         type: title
                         childs:
-                                enabled:
-                                    stage: 4
-                                    type: field
-                                    field-type: boolean
-                                    field-default: false
-                                    field-name: enabled
-                                root:
-                                    stage: 4
-                                    type: field
-                                    field-type: boolean
-                                    field-default: false
-                                    field-name: root
-                                prefix:
-                                    stage: 4
-                                    type: field
-                                    field-type: text
-                                    field-default: news-agency
-                                    field-name: prefix
-                                class:
-                                    stage: 4
-                                    type: field
-                                    field-type: text
-                                    field-default: 'ggm\NewsAgencyBundle\ggmNewsAgencyBundle'
-                                    field-name: class
+                            enabled:
+                                stage: 4
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: enabled
+                            root:
+                                stage: 4
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: root
+                            prefix:
+                                stage: 4
+                                type: field
+                                field-type: text
+                                field-default: news-agency
+                                field-name: prefix
+                            class:
+                                stage: 4
+                                type: field
+                                field-type: text
+                                field-default: 'ggm\NewsAgencyBundle\ggmNewsAgencyBundle'
+                                field-name: class
                     ggmEventCalendarBundle:
                         stage: 3
                         type: title
                         childs:
-                                enabled:
-                                    stage: 4
-                                    type: field
-                                    field-type: boolean
-                                    field-default: false
-                                    field-name: enabled
-                                root:
-                                    stage: 4
-                                    type: field
-                                    field-type: boolean
-                                    field-default: false
-                                    field-name: root
-                                prefix:
-                                    stage: 4
-                                    type: field
-                                    field-type: text
-                                    field-default: event
-                                    field-name: prefix
-                                class:
-                                    stage: 4
-                                    type: field
-                                    field-type: text
-                                    field-default: 'ggm\EventCalendarBundle\ggmEventCalendarBundle'
-                                    field-name: class
+                            enabled:
+                                stage: 4
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: enabled
+                            root:
+                                stage: 4
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: root
+                            prefix:
+                                stage: 4
+                                type: field
+                                field-type: text
+                                field-default: event
+                                field-name: prefix
+                            class:
+                                stage: 4
+                                type: field
+                                field-type: text
+                                field-default: 'ggm\EventCalendarBundle\ggmEventCalendarBundle'
+                                field-name: class
                     ggmCustomerBundle:
                         stage: 3
                         type: title
                         childs:
-                                enabled:
-                                    stage: 4
-                                    type: field
-                                    field-type: boolean
-                                    field-default: false
-                                    field-name: enabled
-                                root:
-                                    stage: 4
-                                    type: field
-                                    field-type: boolean
-                                    field-default: false
-                                    field-name: root
-                                prefix:
-                                    stage: 4
-                                    type: field
-                                    field-type: text
-                                    field-default:
-                                    field-name: prefix
-                                class:
-                                    stage: 4
-                                    type: field
-                                    field-type: text
-                                    field-default: '$ggm.theming.active_theme$\CustomerBundle\CustomerBundle'
-                                    field-name: class
+                            enabled:
+                                stage: 4
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: enabled
+                            root:
+                                stage: 4
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: root
+                            prefix:
+                                stage: 4
+                                type: field
+                                field-type: text
+                                field-default:
+                                field-name: prefix
+                            class:
+                                stage: 4
+                                type: field
+                                field-type: text
+                                field-default: '$ggm.theming.active_theme$\CustomerBundle\CustomerBundle'
+                                field-name: class
 parameters.yml:
     filepath_for_config: 'app/config/parameters.yml'
     parameters:
@@ -316,39 +316,17 @@ parameters.yml:
                                 type: array
                                 array-type: collection
                                 array-keys: false
-                                array-childs:
-                                    server1:
-                                        stage: 5
-                                        type: array
-                                        array-type: collection
-                                        array-keys: false
-                                        array-childs:
-                                            fqdn:
-                                                type: field
-                                                field-type: text
-                                                field-default: 'angrod.gogol-medien.local'
-                                                field-name: server
-                                            port:
-                                                type: field
-                                                field-type: text
-                                                field-default: 11211
-                                                field-name: port
-                                    server2:
-                                        stage: 5
-                                        type: array
-                                        array-type: collection
-                                        array-keys: false
-                                        array-childs:
-                                            fqdn:
-                                                type: field
-                                                field-type: text
-                                                field-default: 'aragorn.gogol-medien.local'
-                                                field-name: server
-                                            port:
-                                                type: field
-                                                field-type: text
-                                                field-default: 11211
-                                                field-name: port
+                                childs:
+                                    fqdn:
+                                        type: field
+                                        field-type: text
+                                        field-default: 'angrod.gogol-medien.local'
+                                        field-name: server
+                                    port:
+                                        type: field
+                                        field-type: text
+                                        field-default: 11211
+                                        field-name: port
                             options:
                                 stage: 4
                                 type: title
