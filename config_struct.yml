@@ -319,13 +319,11 @@ parameters.yml:
                                 array-max: 5
                                 childs:
                                     fqdn:
-                                        stage: 5
                                         type: field
                                         field-type: text
                                         field-default: 'angrod.gogol-medien.local'
                                         field-name: server
                                     port:
-                                        stage: 5
                                         type: field
                                         field-type: text
                                         field-default: 11211
@@ -559,10 +557,17 @@ parameters.yml:
                         field-name: hide zero aggregations
                     confirm_step_checkboxes:
                         stage: 3
-                        type: field
-                        field-type: text
-                        field-default: "['accept_terms_of_service']"
-                        field-name: confirm step checkboxes
+                        type: array
+                        array-type: collection
+                        array-max: 5
+                        array-keys: false
+                        childs:
+                            confirm step checkboxes:
+                                stage: 4
+                                type: field
+                                field-type: text
+                                field-default: "['accept_terms_of_service']"
+                                field-name: name
             ggm.classifiedad.email:
                 stage: 2
                 type: title
