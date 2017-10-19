@@ -319,11 +319,13 @@ parameters.yml:
                                 array-max: 5
                                 childs:
                                     fqdn:
+                                        stage: 5
                                         type: field
                                         field-type: text
                                         field-default: 'angrod.gogol-medien.local'
                                         field-name: server
                                     port:
+                                        stage: 5
                                         type: field
                                         field-type: text
                                         field-default: 11211
