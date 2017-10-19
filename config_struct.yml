@@ -303,7 +303,7 @@ parameters.yml:
                 field-type: text
                 field-default: 'memcache'
                 field-name: ggm global session handler
-            ggm.global.session.handler:
+            ggm.global.session.config:
                 stage: 2
                 type: title
                 childs:
