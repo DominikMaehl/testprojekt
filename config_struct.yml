@@ -356,13 +356,14 @@ parameters.yml:
                 array-type: collection
                 array-keys: true
                 array-max: 5
+                array-merge: true
                 childs:
                     DE:
                         stage: 3
                         type: field
                         field-type: text
                         field-default: '+49'
-                        field-name: country codes
+                        field-name: phone country code
             ggm.global.google:
                 stage: 2
                 type: title
@@ -568,6 +569,7 @@ parameters.yml:
                         array-type: collection
                         array-max: 5
                         array-keys: false
+                        array-merge: true
                         childs:
                             confirm step checkboxes:
                                 stage: 4
@@ -627,7 +629,37 @@ parameters.yml:
                         field-default: '~'
                         field-name: custom redirect service
             # Paid Services
-
+            service_fees:
+                stage: 2
+                type: array
+                array-type: collection
+                array-keys: true
+                array-max: 5
+                childs:
+                    regular:
+                        stage: 3
+                        type: array
+                        array-type: collection
+                        array-keys: false
+                        array-max: 5
+                        childs:
+                            stage: 4
+                            type: field
+                            field-type: text
+                            field-default: ~
+                            field-name: regular
+                    commercial:
+                        stage: 3
+                        type: array
+                        array-type: collection
+                        array-keys: false
+                        array-max: 5
+                        childs:
+                            stage: 4
+                            type: field
+                            field-type: text
+                            field-default: ~
+                            field-name: commercial
             # ggm_job_ad
             ggm.jobad.config:
                 stage: 2
@@ -670,7 +702,50 @@ parameters.yml:
                         field-default: 0
                         field-name: preset advert period in days
             # Payment
-
+            payment_active:
+                stage: 2
+                type: field
+                field-type: boolean
+                field-default: false
+                field-name: payment active
+            payment_from_email:
+                stage: 2
+                type: field
+                field-type: email
+                field-default: webmaster@example.com
+                field-name: payment from email
+            payment_allowed_methods:
+                stage: 2
+                type: array
+                array-type: collection
+                array-keys: false
+                array-max: 5
+                array-merge: true
+                childs:
+                    methods:
+                        stage: 3
+                        type: field
+                        field-type: text
+                        field-default: ~
+                        field-name: method
+            payment_default_method:
+                stage: 2
+                type: field
+                field-type: text
+                field-default: paymill_credit_card
+                field-name: payment default method
+            paymill_api_private_key:
+                stage: 2
+                type: field
+                field-type: text
+                field-default: notInUse
+                field-name: paymill api private key
+            paymill_api_public_key:
+                stage: 2
+                type: field
+                field-type: text
+                field-default: notInUse
+                field-name: paymill api public key
             # WebTracking
             ggm.web_tracking.plugins:
                 stage: 2
