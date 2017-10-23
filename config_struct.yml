@@ -355,17 +355,22 @@ parameters.yml:
             ggm.global.phone_country_codes:
                 stage: 2
                 type: array
-                array-type: collection
-                array-keys: true
+                array-type: keyValue
                 array-max: 5
-                array-merge: true
+                array-merge: false
                 childs:
-                    DE:
+                    key:
+                        stage: 3
+                        type: field
+                        field-type: text
+                        field-default: 'DE'
+                        field-name: country code
+                    value:
                         stage: 3
                         type: field
                         field-type: text
                         field-default: '+49'
-                        field-name: phone country code
+                        field-name: primary prefix
             ggm.global.google:
                 stage: 2
                 type: title
