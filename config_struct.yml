@@ -638,10 +638,7 @@ parameters.yml:
             # Paid Services
             service_fees:
                 stage: 2
-                type: array
-                array-type: collection
-                array-keys: true
-                array-max: 5
+                type: title
                 childs:
                     regular:
                         stage: 3
