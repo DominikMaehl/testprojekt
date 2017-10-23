@@ -646,6 +646,7 @@ parameters.yml:
                         array-type: collection
                         array-keys: false
                         array-max: 5
+                        array-merge: true
                         childs:
                             regularfield:
                                 stage: 4
@@ -659,6 +660,7 @@ parameters.yml:
                         array-type: collection
                         array-keys: false
                         array-max: 5
+                        array-merge: true
                         childs:
                             commercialfield:
                                 stage: 4
