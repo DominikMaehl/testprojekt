@@ -255,6 +255,7 @@ parameters.yml:
             mailer_host:
                 stage: 2
                 type: field
+                constraints: Ip
                 field-type: text
                 field-default: 127.0.0.1
                 field-name: mailer_host
