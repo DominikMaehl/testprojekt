@@ -275,6 +275,7 @@ parameters.yml:
             framework.translator.fallback_locale:
                 stage: 2
                 type: field
+                constraints: Language
                 field-type: text
                 field-default: en
                 field-name: framework translator fallback locale
