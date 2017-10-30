@@ -3,6 +3,7 @@ bootstrap.yml:
     parameters:
         stage: 1
         type: title
+        has-optional: true
         childs:
             ggm.theming.active_theme:
                 stage: 2
@@ -10,33 +11,50 @@ bootstrap.yml:
                 field-type: text
                 field-default: '~'
                 field-name: active_theme
+                field-constraints:
+                    0:
+                        constraint-name: Length
+                        constraint-options:
+                            min: 5
+                            max: 30
+                            minMessage: 'Eingabe zu kurz'
+                            maxMessage: 'Eingabe zu lang'
+                    1:
+                        constraint-name: NotBlank
+                        constraint-options:
             ggm.bootstrap.config:
+                optional: true
                 stage: 2
                 type: title
                 childs:
                     ggmArticleBundle:
                         stage: 3
                         type: title
+                        has-optional: true
                         childs:
                             enabled:
+                                optional: true
                                 stage: 4
                                 type: field
                                 field-type: boolean
                                 field-default: false
                                 field-name: enabled
                             root:
+                                optional: true
                                 stage: 4
                                 type: field
                                 field-type: boolean
                                 field-default: false
                                 field-name: root
                             prefix:
+                                optional: true
                                 stage: 4
                                 type: field
                                 field-type: text
                                 field-default: a
                                 field-name: prefix
                             class:
+                                optional: true
                                 stage: 4
                                 type: field
                                 field-type: text
@@ -255,7 +273,6 @@ parameters.yml:
             mailer_host:
                 stage: 2
                 type: field
-                constraints: Ip
                 field-type: text
                 field-default: 127.0.0.1
                 field-name: mailer_host
@@ -275,7 +292,6 @@ parameters.yml:
             framework.translator.fallback_locale:
                 stage: 2
                 type: field
-                constraints: Language
                 field-type: text
                 field-default: en
                 field-name: framework translator fallback locale
@@ -318,6 +334,14 @@ parameters.yml:
                                 type: array
                                 array-type: collection
                                 array-max: 5
+                                array-constraints:
+                                    0:
+                                        constraint-name: Count
+                                        constraint-options:
+                                            min: 1
+                                            max: 3
+                                            minMessage: 'Zu wenig Server angegeben'
+                                            maxMessage: 'Zu viele Server angegeben'
                                 childs:
                                     0:
                                         stage: 5
@@ -325,12 +349,21 @@ parameters.yml:
                                         field-type: text
                                         field-default: 'angrod.gogol-medien.local'
                                         field-name: server
+                                        field-constraints:
+                                            0:
+                                                constraint-name: Url
                                     1:
                                         stage: 5
                                         type: field
-                                        field-type: text
+                                        field-type: integer
                                         field-default: 11211
                                         field-name: port
+                                        field-constraints:
+                                            0:
+                                                constraint-name: Range
+                                                constraint-options:
+                                                    min: 1000
+                                                    max: 65535
                             options:
                                 stage: 4
                                 type: title
