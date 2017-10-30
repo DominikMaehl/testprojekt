@@ -2,6 +2,178 @@ bootstrap.yml:
     filepath_for_config: 'app/config/bootstrap.yml'
     parameters:
         type: title 
+        title-name: 'Parameters' 
+        childs:
+            ggm.theming.active_theme: 
+                type: field
+                field-type: text
+                field-default: '~'
+                field-name: active_theme
+                field-constraints:
+                    0:
+                        constraint-name: Length
+                        constraint-options:
+                            min: 5
+                            max: 30
+                            minMessage: 'Eingabe zu kurz'
+                            maxMessage: 'Eingabe zu lang'
+                    1:
+                        constraint-name: NotBlank
+                        constraint-options:
+            ggm.bootstrap.config:
+                optional: true
+                type: title 
+                title-name: 'Bootstrap Config' 
+                childs:
+                    ggmArticleBundle:    
+                        type: title 
+                        title-name: 'Article Bundle'
+                        childs:
+                            enabled:
+                                optional: true
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: enabled
+                            root:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: root
+                            prefix:
+                                type: field
+                                field-type: text
+                                field-default: a
+                                field-name: prefix
+                            class:
+                                type: field
+                                field-type: text
+                                field-default: 'ggm\ArticleBundle\ggmArticleBundle'
+                                field-name: class
+                    ggmClassifiedAdBundle:
+                        type: title 
+                        title-name: 'Classified Ad Bundle'
+                        childs:
+                            enabled:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: enabled
+                            root:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: root
+                            prefix:
+                                type: field
+                                field-type: text
+                                field-default: cad
+                                field-name: prefix
+                            class:
+                                type: field
+                                field-type: text
+                                field-default: 'ggm\ClassifiedAdBundle\ggmClassifiedAdBundle'
+                                field-name: class
+                    ggmJobAdBundle:
+                        type: title 
+                        title-name: 'Job Ad Bundle'
+                        childs:
+                            enabled:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: enabled
+                            root:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: root
+                            prefix:
+                                type: field
+                                field-type: text
+                                field-default: jobs
+                                field-name: prefix
+                            class:
+                                type: field
+                                field-type: text
+                                field-default: 'ggm\JobAdBundle\ggmJobAdBundle'
+                                field-name: class
+                    ggmNewsAgencyBundle:
+                        type: title 
+                        title-name: 'News Agency Bundle'
+                        childs:
+                            enabled:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: enabled
+                            root:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: root
+                            prefix:
+                                type: field
+                                field-type: text
+                                field-default: news-agency
+                                field-name: prefix
+                            class:
+                                type: field
+                                field-type: text
+                                field-default: 'ggm\NewsAgencyBundle\ggmNewsAgencyBundle'
+                                field-name: class
+                    ggmEventCalendarBundle:
+                        type: title 
+                        title-name: 'Event Calendar Bundle'
+                        childs:
+                            enabled:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: enabled
+                            root:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: root
+                            prefix:
+                                type: field
+                                field-type: text
+                                field-default: event
+                                field-name: prefix
+                            class:
+                                type: field
+                                field-type: text
+                                field-default: 'ggm\EventCalendarBundle\ggmEventCalendarBundle'
+                                field-name: class
+                    ggmCustomerBundle:
+                        type: title 
+                        title-name: 'Customer Bundle'
+                        childs:
+                            enabled:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: enabled
+                            root:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: root
+                            prefix:
+                                type: field
+                                field-type: text
+                                field-default:
+                                field-name: prefix
+                            class:
+                                type: field
+                                field-type: text
+                                field-default: '$ggm.theming.active_theme$\CustomerBundle\CustomerBundle'
+                                field-name: class
+bootstrapTEST.yml:
+    filepath_for_config: 'app/config/bootstrap.yml'
+    parameters:
+        type: title 
         title-name: 'default Name' 
         childs:
             ggm.theming.active_theme: 
@@ -36,23 +208,41 @@ bootstrap.yml:
                                 field-default: false
                                 field-name: enabled
                             root:
-                                optional: true
                                 type: field
                                 field-type: boolean
                                 field-default: false
                                 field-name: root
                             prefix:
-                                optional: true
                                 type: field
                                 field-type: text
                                 field-default: a
                                 field-name: prefix
                             class:
-                                optional: true
                                 type: field
                                 field-type: text
                                 field-default: 'ggm\ArticleBundle\ggmArticleBundle'
                                 field-name: class
+                            TEST:
+                                optional: true
+                                type: title 
+                                title-name: 'EIN TEST'
+                                childs:
+                                    enabled:
+                                        optional: true
+                                        type: field
+                                        field-type: boolean
+                                        field-default: false
+                                        field-name: enabled
+                            TEST2:
+                                type: title 
+                                title-name: 'EIN TEST2'
+                                childs:
+                                    enabled:
+                                        optional: true
+                                        type: field
+                                        field-type: boolean
+                                        field-default: false
+                                        field-name: enabled
                     ggmClassifiedAdBundle:
                         type: title 
                         title-name: 'default Name'
@@ -285,7 +475,8 @@ parameters.yml:
                         title-name: 'default Name'
                         childs:
                             servers:
-                                type: array
+                                type: array 
+                                array-name: 'default name'                                
                                 array-type: collection
                                 array-max: 5
                                 array-constraints:
@@ -336,7 +527,8 @@ parameters.yml:
                 field-default: '~'
                 field-name: ggm global root route
             ggm.global.phone_country_codes:
-                type: array
+                type: array 
+                array-name: 'default name'                
                 array-type: keyValue
                 array-max: 5
                 array-merge: false
@@ -523,7 +715,8 @@ parameters.yml:
                         field-default: true
                         field-name: hide zero aggregations
                     confirm_step_checkboxes:
-                        type: array
+                        type: array 
+                        array-name: 'default name'                        
                         array-type: collection
                         array-max: 5
                         array-merge: true
@@ -583,7 +776,8 @@ parameters.yml:
                 title-name: 'default Name'
                 childs:
                     regular:
-                        type: array
+                        type: array 
+                        array-name: 'default name'                        
                         array-type: collection
                         array-max: 5
                         array-merge: true
@@ -594,7 +788,8 @@ parameters.yml:
                                 field-default: ~
                                 field-name: regular
                     commercial:
-                        type: array
+                        type: array 
+                        array-name: 'default name'                        
                         array-type: collection
                         array-max: 5
                         array-merge: true
@@ -651,7 +846,8 @@ parameters.yml:
                 field-default: webmaster@example.com
                 field-name: payment from email
             payment_allowed_methods:
-                type: array
+                type: array 
+                array-name: 'default name'                
                 array-type: collection
                 array-max: 5
                 array-merge: true
