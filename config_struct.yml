@@ -50,6 +50,27 @@ bootstrap.yml:
                                 field-type: text
                                 field-default: 'ggm\ArticleBundle\ggmArticleBundle'
                                 field-name: class
+                            TEST:
+                                optional: true
+                                type: title 
+                                title-name: 'EIN TEST'
+                                childs:
+                                    enabled:
+                                        optional: true
+                                        type: field
+                                        field-type: boolean
+                                        field-default: false
+                                        field-name: enabled
+                            TEST2:
+                                type: title 
+                                title-name: 'EIN TEST2'
+                                childs:
+                                    enabled:
+                                        optional: true
+                                        type: field
+                                        field-type: boolean
+                                        field-default: false
+                                        field-name: enabled
                     ggmClassifiedAdBundle:
                         type: title 
                         title-name: 'Classified Ad Bundle'
@@ -60,11 +81,13 @@ bootstrap.yml:
                                 field-default: false
                                 field-name: enabled
                             root:
+                                optional: true
                                 type: field
                                 field-type: boolean
                                 field-default: false
                                 field-name: root
                             prefix:
+                                optional: true
                                 type: field
                                 field-type: text
                                 field-default: cad
