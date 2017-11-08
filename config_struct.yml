@@ -47,8 +47,8 @@ parameters.yml:
                     0:
                         constraint-name: Range
                         constraint-options:
-                            Min: 0
-                            Max: 65535
+                            min: 0
+                            max: 65535
             database_name:
                 type: field
                 field-type: text
