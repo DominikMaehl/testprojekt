@@ -36,17 +36,19 @@ parameters.yml:
                 field-name: Database Host
                 field-default: 10.64.202.70
                 field-constraints:
-                    constraint-name: Ip
+                    0:
+                        constraint-name: Ip
             database_port:
                 type: field
                 field-type: integer
                 field-name: Database Port
                 field-default: 3306
                 field-constraints:
-                    constraint-name: Range
-                    constraint-options:
-                        Min: 0
-                        Max: 65535
+                    0:
+                        constraint-name: Range
+                        constraint-options:
+                            Min: 0
+                            Max: 65535
             database_name:
                 type: field
                 field-type: text
@@ -150,7 +152,8 @@ parameters.yml:
                 field-name: Portal Domain
                 field-default: 'http://www.meinbezirk.at/'
                 field-constraints:
-                    constraint-name: Url
+                    0:
+                        constraint-name: Url
             ggm.global.phone_country_codes:
                 type: array
                 array-type: keyValue
