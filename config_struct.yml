@@ -1,170 +1,378 @@
-bootstrap.yml:
-    filepath_for_config: 'app/config/bootstrap.yml'
+parameters.yml:
+    filepath_for_config: 'app/config/parameters.yml'
     parameters:
-        type: title 
-        title-name: 'Parameters' 
+        type: title
+        title-name: Parameters
         childs:
-            ggm.theming.active_theme: 
+            assetic.filters.sass.bin:
                 type: field
                 field-type: text
-                field-default: ~
-                field-name: active_theme
+                field-name: Assetic Filters SASS Bin
+                field-default: '/usr/local/bin/sass'
+            assetic.filters.uglifyjs2.bin:
+                type: field
+                field-type: text
+                field-name: Assetic Filters Uglify JS Bin
+                field-default: '/usr/local/bin/uglifyjs'
+            assetic.filters.uglifycss.bin:
+                type: field
+                field-type: text
+                field-name: Assetic Filters Uglify CSS Bin
+                field-default: '/usr/local/bin/uglifycss'
+            database_driver:
+                type: field
+                field-type: text
+                field-name: Database Driver
+                field-default: pdo_mysql
+            database_path:
+                type: field
+                field-type: text
+                field-name: Database Path
+                field-default: null
+                null-when-empty: true
+            database_host:
+                type: field
+                field-type: text
+                field-name: Database Host
+                field-default: 10.64.202.70
                 field-constraints:
-                    0:
-                        constraint-name: Length
-                        constraint-options:
-                            min: 5
-                            max: 30
-                            minMessage: 'Eingabe zu kurz'
-                            maxMessage: 'Eingabe zu lang'
-                    1:
-                        constraint-name: NotBlank
-                        constraint-options:
-            ggm.bootstrap.config:
-                type: title 
-                title-name: 'Bootstrap Config' 
+                    constraint-name: Ip
+            database_port:
+                type: field
+                field-type: integer
+                field-name: Database Port
+                field-default: 3306
+                field-constraints:
+                    contstraint-name: Range
+                    contstraint-options:
+                        Min: 0
+                        Max: 65535
+            database_name:
+                type: field
+                field-type: text
+                field-name: Database Name
+                field-default: meinbezirk_at_portal-webapp
+            database_user:
+                type: field
+                field-type: text
+                field-name: Database User
+                field-default: anyUser
+            database_password:
+                type: field
+                field-type: text
+                field-name: Database Password
+                field-default: anyPw
+            mailer_transport:
+                type: field
+                field-type: text
+                field-name: Mailer Transport
+                field-default: smtp
+            mailer_host:
+                type: field
+                field-type: text
+                field-name: Mailer Host
+                field-default: mxgw1.regionalmedien.at
+            mailer_user:
+                type: field
+                field-type: text
+                field-name: Mailer User
+                field-default: anyUser
+            mailer_password:
+                type: field
+                field-type: text
+                field-name: Mailer Password
+                field-default: anyPW
+            framework.translator.fallback.locale:
+                type: field
+                field-type: locale
+                field-name: Framework Translator Fallback Locale
+                field-default: en
+            framework.default_locale:
+                type: field
+                field-type: text
+                field-name: Framework Default Locale
+                field-default: de_AT.UTF-8
+            framework.secret:
+                type: field
+                field-type: text
+                field-name: Framework Secret
+                field-default: 12487ß8027809271dfhjsdhfaoiuhfasdou8292748
+            assets_version:
+                type: field
+                field-type: text
+                field-name: Assets Version
+                field-default: null
+                null-when-empty: true
+            ggm.global.root_route:
+                type: field
+                field-type: text
+                field-name: GGM Global Root Route
+                field-default: ggm_classfiedad_advert_overview
+            ggm.routing.redirects:
+                type: title
+                title-name: GGM Routing Redirects
                 childs:
-                    ggmArticleBundle:    
-                        type: title 
-                        title-name: 'Article Bundle'
+                    static_redirects:
+                        type: array
+                        array-type: keyValue
+                        array-name: Static Redirects
+                        null-when-empty: true
                         childs:
-                            enabled:
-                                type: field
-                                field-type: boolean
-                                field-default: false
-                                field-name: enabled
-                            root:
-                                type: field
-                                field-type: boolean
-                                field-default: false
-                                field-name: root
-                            prefix:
+                            key:
                                 type: field
                                 field-type: text
-                                field-default: a
-                                field-name: prefix
-                            class:
+                                field-name: Request URL
+                                field-default: '/jobs'
+                            value:
                                 type: field
                                 field-type: text
-                                field-default: 'ggm\ArticleBundle\ggmArticleBundle'
-                                field-name: class
-                    ggmClassifiedAdBundle:
-                        type: title 
-                        title-name: 'Classified Ad Bundle'
+                                field-name: Redirect
+                                field-default: '/jobs/start'
+                    not_found_redirects_enabled:
+                        type: field
+                        field-type: boolean
+                        field-name: Not Found Redirects Enabled
+                        field-default: false
+                    custom_redirect_service:
+                        type: field
+                        field-type: text
+                        field-name: Custom Redirect Service
+                        field-default: null
+                        null-when-empty: true
+            ggm.routing.scheme:
+                type: field
+                field-type: text
+                field-name: GGM Routing Scheme
+                field-default: https
+            portal_domain:
+                type: field
+                field-type: text
+                field-name: Portal Domain
+                field-default: 'http://www.meinbezirk.at/'
+                field-constraints:
+                    constraint-name: Url
+            ggm.global.phone_country_codes:
+                type: array
+                array-type: keyValue
+                array-name: GGM Global Phone Country Codes
+                childs:
+                    key:
+                        type: field
+                        field-type: locale
+                        field-name: Country Code
+                        field-default: DE
+                    value:
+                        type: field
+                        field-type: text
+                        field-name: Phone Code
+                        field-default: '+49'
+            search_selective_update:
+                type: field
+                field-type: boolean
+                field-name: Search Selective Update
+                field-default: true
+            search_connections:
+                type: array
+                array-type: keyValue
+                array-name: Search Connections
+                childs:
+                    key:
+                        type: field
+                        field-type: text
+                        field-name: Adress Type
+                        field-default: url
+                    value:
+                        type: field
+                        field-type: text
+                        field-name: Url
+                        field-default: 'http://10.64.202.98:9200'
+            search_index_name:
+                type: field
+                field-type: text
+                field-name: Search Index Name
+                field-default: meinbezirk.at
+            service_fees:
+                type: title
+                title-name: Service Fees
+                childs:
+                    regular:
+                        type: array
+                        array-type: keyValue
+                        array-name: Regular
                         childs:
-                            enabled:
-                                type: field
-                                field-type: boolean
-                                field-default: false
-                                field-name: enabled
-                            root:
-                                type: field
-                                field-type: boolean
-                                field-default: false
-                                field-name: root
-                            prefix:
+                            key:
                                 type: field
                                 field-type: text
-                                field-default: cad
-                                field-name: prefix
-                            class:
-                                type: field
-                                field-type: text
-                                field-default: 'ggm\ClassifiedAdBundle\ggmClassifiedAdBundle'
-                                field-name: class
-                    ggmJobAdBundle:
-                        type: title 
-                        title-name: 'Job Ad Bundle'
+                                field-name: Full Namespace Path
+                                field-default: null
+                            value:
+                                type: title
+                                title-name: Namespace Configuration
+                                childs:
+                                    base_fee:
+                                        type: field
+                                        field-type: integer
+                                        field-name: Base Fee
+                                        field-default: 0
+                                    options:
+                                        type: title
+                                        title-name: Options
+                                        optional: true
+                                        childs:
+                                            item_count_modifier:
+                                                type: title
+                                                title-name: Item Count Modifier
+                                                optional: true
+                                                childs:
+                                                    default_multiplicator:
+                                                        type: field
+                                                        field-type: integer
+                                                        field-name: Default Multiplicator
+                                                        field-default: 1
+                                                    segments:
+                                                        type: array
+                                                        array-type: keyValue
+                                                        array-name: Segments
+                                                        childs:
+                                                            key:
+                                                                type: field
+                                                                field-type: integer
+                                                                field-name: Anzahl Elemente
+                                                                field-default: 0
+                                                            value:
+                                                                type: field
+                                                                field-type: integer
+                                                                field-name: Multiplikator
+                                                                field-default: 1
+                                            text_fee:
+                                                type: title
+                                                title-name: Text Fee
+                                                optional: true
+                                                childs:
+                                                    unit:
+                                                        type: field
+                                                        field-type: text
+                                                        field-name: Unit
+                                                        field-default: 'char|block'
+                                                    unit_length:
+                                                        type: field
+                                                        field-type: integer
+                                                        field-name: Unit Length
+                                                        field-default: 5
+                                                    unit_fee:
+                                                        type: field
+                                                        field-type: integer
+                                                        field-name: Unit Fee
+                                                        field-default: 10
+                    commercial:
+                        type: array
+                        array-type: keyValue
+                        array-name: Commercial
                         childs:
-                            enabled:
-                                type: field
-                                field-type: boolean
-                                field-default: false
-                                field-name: enabled
-                            root:
-                                type: field
-                                field-type: boolean
-                                field-default: false
-                                field-name: root
-                            prefix:
+                            key:
                                 type: field
                                 field-type: text
-                                field-default: jobs
-                                field-name: prefix
-                            class:
-                                type: field
-                                field-type: text
-                                field-default: 'ggm\JobAdBundle\ggmJobAdBundle'
-                                field-name: class
-                    ggmNewsAgencyBundle:
-                        type: title 
-                        title-name: 'News Agency Bundle'
+                                field-name: Full Namespace Path
+                                field-default: null
+                            value:
+                                type: title
+                                title-name: Namespace Configuration
+                                childs:
+                                    base_fee:
+                                        type: field
+                                        field-type: integer
+                                        field-name: Base Fee
+                                        field-default: 0
+                                    options:
+                                        type: title
+                                        title-name: Options
+                                        optional: true
+                                        childs:
+                                            item_count_modifier:
+                                                type: title
+                                                title-name: Item Count Modifier
+                                                optional: true
+                                                childs:
+                                                    default_multiplicator:
+                                                        type: field
+                                                        field-type: integer
+                                                        field-name: Default Multiplicator
+                                                        field-default: 1
+                                                    segments:
+                                                        type: array
+                                                        array-type: keyValue
+                                                        array-name: Segments
+                                                        childs:
+                                                            key:
+                                                                type: field
+                                                                field-type: integer
+                                                                field-name: Anzahl Elemente
+                                                                field-default: 0
+                                                            value:
+                                                                type: field
+                                                                field-type: integer
+                                                                field-name: Multiplikator
+                                                                field-default: 1
+                                            text_fee:
+                                                type: title
+                                                title-name: Text Fee
+                                                optional: true
+                                                childs:
+                                                    unit:
+                                                        type: field
+                                                        field-type: text
+                                                        field-name: Unit
+                                                        field-default: 'char|block'
+                                                    unit_length:
+                                                        type: field
+                                                        field-type: integer
+                                                        field-name: Unit Length
+                                                        field-default: 5
+                                                    unit_fee:
+                                                        type: field
+                                                        field-type: integer
+                                                        field-name: Unit Fee
+                                                        field-default: 10
+
+            maintenance_tasks:
+                type: array
+                array-type: keyValue
+                array-name: Maintenance Task
+                childs:
+                    key:
+                        type: field
+                        field-type: text
+                        field-name: Task Name
+                        field-default: null
+                    value:
+                        type: title
+                        title-name: Task Configuration
                         childs:
-                            enabled:
+                            intervall:
                                 type: field
-                                field-type: boolean
-                                field-default: false
-                                field-name: enabled
-                            root:
+                                field-type: choice
+                                field-name: Intervall
+                                field-default: null
+                                field-choices: { hourly: hourly, daylie: daylie, weekly: weekly, monthly: monthly }
+                            timeframe_start:
                                 type: field
-                                field-type: boolean
-                                field-default: false
-                                field-name: root
-                            prefix:
+                                field-type: integer
+                                field-name: Timeframe Start
+                                field-default: 0
+                            timeframe_end:
                                 type: field
-                                field-type: text
-                                field-default: news-agency
-                                field-name: prefix
-                            class:
-                                type: field
-                                field-type: text
-                                field-default: 'ggm\NewsAgencyBundle\ggmNewsAgencyBundle'
-                                field-name: class
-                    ggmEventCalendarBundle:
-                        type: title 
-                        title-name: 'Event Calendar Bundle'
-                        childs:
-                            enabled:
-                                type: field
-                                field-type: boolean
-                                field-default: false
-                                field-name: enabled
-                            root:
-                                type: field
-                                field-type: boolean
-                                field-default: false
-                                field-name: root
-                            prefix:
-                                type: field
-                                field-type: text
-                                field-default: event
-                                field-name: prefix
-                            class:
-                                type: field
-                                field-type: text
-                                field-default: 'ggm\EventCalendarBundle\ggmEventCalendarBundle'
-                                field-name: class
-                    ggmCustomerBundle:
-                        type: title 
-                        title-name: 'Customer Bundle'
-                        childs:
-                            enabled:
-                                type: field
-                                field-type: boolean
-                                field-default: false
-                                field-name: enabled
-                            root:
-                                type: field
-                                field-type: boolean
-                                field-default: false
-                                field-name: root
-                            prefix:
-                                type: field
-                                field-type: text
-                                field-default:
-                                field-name: prefix
-                            class:
-                                type: field
-                                field-type: text
-                                field-default: '$ggm.theming.active_theme$\CustomerBundle\CustomerBundle'
-                                field-name: class
+                                field-type: integer
+                                field-name: Timeframe End
+                                field-default: 0
+                            parameters:
+                                type: array
+                                array-type: collection
+                                array-name: Parameters
+                                optional: true
+                                childs:
+                                    0:
+                                        type: field
+                                        field-type: text
+                                        field-name: Value
+                                        field-default: null
+
