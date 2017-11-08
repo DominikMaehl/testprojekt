@@ -43,8 +43,8 @@ parameters.yml:
                 field-name: Database Port
                 field-default: 3306
                 field-constraints:
-                    contstraint-name: Range
-                    contstraint-options:
+                    constraint-name: Range
+                    constraint-options:
                         Min: 0
                         Max: 65535
             database_name:
