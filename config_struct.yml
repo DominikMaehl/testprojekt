@@ -86,7 +86,7 @@ parameters.yml:
                 field-default: anyPW
             framework.translator.fallback.locale:
                 type: field
-                field-type: locale
+                field-type: country
                 field-name: Framework Translator Fallback Locale
                 field-default: en
             framework.default_locale:
@@ -161,7 +161,7 @@ parameters.yml:
                 childs:
                     key:
                         type: field
-                        field-type: locale
+                        field-type: country
                         field-name: Country Code
                         field-default: DE
                     value:
