@@ -564,6 +564,7 @@ parameters.yml:
                             value:
                                 type: title
                                 title-name: Configuration
+                                childs:
                                     id:
                                         type: field
                                         field-type: text
@@ -615,3 +616,5 @@ parameters.yml:
                                                 field-type: text
                                                 field-name: myValue
                                                 field-default: 'max-age=15552000'
+
+
