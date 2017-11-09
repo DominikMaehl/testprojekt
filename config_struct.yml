@@ -301,6 +301,10 @@ parameters.yml:
                                                         field-type: number
                                                         field-name: Default Multiplicator
                                                         field-default: 0.5
+                                                        field-constraints:
+                                                            0:
+                                                                constraint-name: Type
+                                                                constraint-options: float
                                                     segments:
                                                         type: array
                                                         array-type: keyValue
@@ -316,6 +320,10 @@ parameters.yml:
                                                                 field-type: number
                                                                 field-name: Multiplikator
                                                                 field-default: 0.5
+                                                                field-constraints:
+                                                                    0:
+                                                                        constraint-name: Type
+                                                                        constraint-options: float
                                             text_fee:
                                                 type: title
                                                 title-name: Text Fee
