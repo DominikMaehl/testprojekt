@@ -679,11 +679,10 @@ parameters.yml:
                         field-name: Prefix
                         field-default: jobs
                     value:
-                        type: array
-                        array-type: collection
-                        array-name: Bundle Layout
-                        childs:
-                            bundle_layout:
+                        bundle_layout:
+                            type: title
+                            title-name: Bundle Layout
+                            childs:
                                 type: field
                                 field-type: text
                                 field-name: Bundle Layout
