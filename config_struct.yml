@@ -964,7 +964,7 @@ parameters.yml:
                                         optional: true
                                     customer:
                                         type: field
-                                        field-type: boolean
+                                        field-type: text
                                         field-name: Customer
                                         field-default: 'meinbezirk.at'
                                         optional: true
@@ -997,8 +997,195 @@ parameters.yml:
                                 field-name: Site ID
                                 field-default: woche
                                 optional: true
-                ggm_legacy.enabled:
-                    type: field
-                    field-type: boolean
-                    field-name: GGM Legacy Enabled
-                    field-default: true
+            ggm_legacy.enabled:
+                type: field
+                field-type: boolean
+                field-name: GGM Legacy Enabled
+                field-default: true
+            ggm_legacy.setting:
+                type: title
+                title-name: GGM Legacy Setting
+                childs:
+                    portal_url:
+                        type: field
+                        field-type: text
+                        field-name: Portal URL
+                        field-default: 'http://www.meinbezirk.at'
+                    storage_import_callback:
+                        type: field
+                        field-type: boolean
+                        field-name: Storage Import Callback
+                        field-default: true
+                    api_key:
+                        type: field
+                        field-type: text
+                        field-name: Api Key
+                        field-default: 13214hpo14124hoip1431341poh4314134
+            ggm.global.google_api_key:
+                type: title
+                field-type: text
+                field-name: GGM Global Google Api Key
+                field-default: 'SASD123er3f42323fDASDAS_1233DSAd314'
+            ggm.global.email:
+                type: title
+                title-name: GGM Global Email
+                childs:
+                    address:
+                        type: field
+                        field-type: text
+                        field-name: Address
+                        field-default: 'noreply@meinbezirk.at'
+                    sender_name:
+                        type: field
+                        field-type: text
+                        field-name: Sender Name
+                        field-default: meinbezirk.at
+            ggm.global.report:
+                type: title
+                title-name: GGM Global Report
+                childs:
+                    enabled:
+                        type: field
+                        field-type: boolean
+                        field-name: Enabled
+                        field-default: true
+                    delivery_email:
+                        type: field
+                        field-type: text
+                        field-name: Delivery Email
+                        field-default: 'regionaut@regionalmedien.at'
+            ggm.global.feedback:
+                type: title
+                title-name: GGM Global Feedback
+                childs:
+                    enabled:
+                        type: field
+                        field-type: boolean
+                        field-name: Enabled
+                        field-default: false
+                    delivery_email:
+                        type: field
+                        field-type: text
+                        field-name: Delivery Email
+                        field-default: 'webmaster@example.com'
+            ggm.classifiedad.advert:
+                type: title
+                title-name: GGM Classifiedad Advert
+                childs:
+                    approval:
+                        type: field
+                        field-type: choice
+                        field-name: Approval
+                        field-choices: {managed: managed, direct: direct}
+                    print_optional:
+                        type: field
+                        field-type: boolean
+                        field-name: Print Optional
+                        field-default: false
+                    print_consecutive_max:
+                        type: field
+                        field-type: boolean
+                        field-name: Print Consecutive Max
+                        field-default: 1
+                    anonymous_adverts_enabled:
+                        type: field
+                        field-type: boolean
+                        field-name: Anonymous Adverts Enabled
+                        field-default: true
+                    commercial_type_enabled:
+                        type: field
+                        field-type: boolean
+                        field-name: Commercial Type Enabled
+                        field-default: false
+                    print_description_minlen:
+                        type: field
+                        field-type: integer
+                        field-name: Print Description Minlen
+                        field-default: 16
+                    print_description_maxlen:
+                        type: field
+                        field-type: integer
+                        field-name: Print Description Maxlen
+                        field-default: 280
+                    show_aggregations_counter:
+                        type: field
+                        field-type: boolean
+                        field-name: Show Aggregations Counter
+                        field-default: false
+                    hide_zero_aggregations:
+                        type: field
+                        field-type: boolean
+                        field-name: Hide Zero Aggregations
+                        field-default: true
+                    confirm_step_checkboxes:
+                        type: array
+                        array-type: collection
+                        array-name: Confirm Step Checkboxes
+                        childs:
+                            0:
+                                type: field
+                                field-type: text
+                                field-name: Parameter
+                                field-default: "'accept_terms_of_service'"
+            ggm.classifiedad.email:
+                type: title
+                title-name: GGM Classifiedad Email
+                childs:
+                    from_email:
+                        type: field
+                        field-type: text
+                        field-name: From Email
+                        field-default: 'kleinanzeigen@meinbezirk.at'
+                    advert_notification_enabled:
+                        type: field
+                        field-type: boolean
+                        field-name: Advert Notification Enabled
+                        field-default: false
+                    advert_notification_email:
+                        type: field
+                        field-type: text
+                        field-name: Advert Notification Email
+                        field-default: 'webmaster@example.com'
+            ggm.global.session.handler:
+                type: field
+                field-type: text
+                field-name: GGM Global Session Handler
+                field-default: memcache
+            ggm.global.session.config:
+                type: title
+                title-name: GGM Global Session Config
+                childs:
+                    memcache:
+                        type: title
+                        title-name: Memcache
+                        childs:
+                            servers:
+                                type: array
+                                array-type: collection
+                                array-name: Servers
+                                childs:
+                                    fqdn:
+                                        type: field
+                                        field-type: text
+                                        field-default: 10.64.202.102
+                                        field-name: server
+                                    port:
+                                        type: field
+                                        field-type: integer
+                                        field-default: 11211
+                                        field-name: port
+                            options:
+                                type: title
+                                title-name: Options
+                                childs:
+                                    prefix:
+                                        type: field
+                                        field-type: text
+                                        field-default: 'pwsmbz-'
+                                        field-name: 'prefix'
+                                    expiretime:
+                                        type: field
+                                        field-type: text
+                                        field-default: 1440
+                                        field-name: 'expiretime'
+
