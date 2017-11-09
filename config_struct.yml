@@ -616,201 +616,201 @@ parameters.yml:
                                                 field-type: text
                                                 field-name: myValue
                                                 field-default: 'max-age=15552000'
-                                    ggm.cms.teaser.override_templates:
-                                        type: array
-                                        array-type: keyValue
-                                        array-name: GGM Cms Teaser Override Templates
-                                        null-when-empty: true
-                                        childs:
-                                            key:
-                                                type: field
-                                                field-type: text
-                                                field-name: Data Type
-                                                field-default: article
-                                            value:
-                                                type: array
-                                                array-type: keyValue
-                                                array-name: Template
-                                                childs:
-                                                    key:
-                                                        type: field
-                                                        field-type: text
-                                                        field-name: Template Key
-                                                        field-default: tpl1
-                                                    value:
-                                                        type: field
-                                                        field-type: text
-                                                        field-name: Template Name
-                                                        field-default: 'ggmArticleBundle:Teaser:cmsArticle1.html.twig'
-                                    ggm.cms.page.templates:
-                                        type: array
-                                        array-type: keyValue
-                                        array-name: GGM Cms Page Templates
-                                        null-when-empty: true
-                                        childs:
-                                            key:
-                                                type: field
-                                                field-type: text
-                                                field-name: Key
-                                                field-default: tpl0
-                                            value:
-                                                type: field
-                                                field-type: text
-                                                field-name: Template
-                                                field-default: 'ggmArticleBundle:Cms:contented1.html.twig'
-                                    ggm.cms.page.bundles:
-                                        type: array
-                                        array-type: keyValue
-                                        array-name: GGM Cms Page Bundles
-                                        childs:
-                                            key:
-                                                type: field
-                                                field-type: text
-                                                field-name: Prefix
-                                                field-default: jobs
-                                            value:
-                                                type: array
-                                                array-type: keyValue
-                                                array-name: Configuration
-                                                childs:
-                                                    key:
-                                                        type: field
-                                                        field-type: text
-                                                        field-name: Bundle Layout
-                                                        field-default: bundle_layout
-                                                    value:
-                                                        type: title
-                                                        title-name: Configuration
-                                                        childs:
-                                                            bundle_layout:
-                                                                type: field
-                                                                field-type: text
-                                                                field-name: Bundle Layout
-                                                                field-default: 'ggmJobAdBundle:Bundle:bundleLayout.html.twig'
-                                    ggm_advertisement.enabled:
-                                        type: field
-                                        field-type: boolean
-                                        field-name: GGM Advertisement Enabled
-                                        field-default: true
-                                    ggm.task.dispatcher:
+            ggm.cms.teaser.override_templates:
+                type: array
+                array-type: keyValue
+                array-name: GGM Cms Teaser Override Templates
+                null-when-empty: true
+                childs:
+                    key:
+                        type: field
+                        field-type: text
+                        field-name: Data Type
+                        field-default: article
+                    value:
+                        type: array
+                        array-type: keyValue
+                        array-name: Template
+                        childs:
+                            key:
+                                type: field
+                                field-type: text
+                                field-name: Template Key
+                                field-default: tpl1
+                            value:
+                                type: field
+                                field-type: text
+                                field-name: Template Name
+                                field-default: 'ggmArticleBundle:Teaser:cmsArticle1.html.twig'
+            ggm.cms.page.templates:
+                type: array
+                array-type: keyValue
+                array-name: GGM Cms Page Templates
+                null-when-empty: true
+                childs:
+                    key:
+                        type: field
+                        field-type: text
+                        field-name: Key
+                        field-default: tpl0
+                    value:
+                        type: field
+                        field-type: text
+                        field-name: Template
+                        field-default: 'ggmArticleBundle:Cms:contented1.html.twig'
+            ggm.cms.page.bundles:
+                type: array
+                array-type: keyValue
+                array-name: GGM Cms Page Bundles
+                childs:
+                    key:
+                        type: field
+                        field-type: text
+                        field-name: Prefix
+                        field-default: jobs
+                    value:
+                        type: array
+                        array-type: keyValue
+                        array-name: Configuration
+                        childs:
+                            key:
+                                type: field
+                                field-type: text
+                                field-name: Bundle Layout
+                                field-default: bundle_layout
+                            value:
+                                type: title
+                                title-name: Configuration
+                                childs:
+                                    bundle_layout:
                                         type: field
                                         field-type: text
-                                        field-name: GGM Task Dispatcher
-                                        field-default: 'ggm\TaskBundle\Dispatcher\BeanstalkDispatcher'
-                                    ggm.task.dispatcher_config:
-                                        type: title
-                                        title-name: GGM Task Dispatcher Config
-                                        childs:
-                                            ggm\TaskBundle\Dispatcher\BeanstalkDispatcher:
-                                                type: title
-                                                title-name: Beanstalk Dispatcher
-                                                childs:
-                                                    server:
-                                                        type: field
-                                                        field-type: text
-                                                        field-name: Server
-                                                        field-default: '10.64.202.79:11300'
-                                                    interpreter:
-                                                        type: field
-                                                        field-type: text
-                                                        field-name: Interpreter
-                                                        field-default: php70
-                                                    command_root:
-                                                        type: field
-                                                        field-type: text
-                                                        field-name: Command Root
-                                                        field-default: '/dataApplication/customers/meinbezirk.at/software/gogol-medien/portal-webapp/releases/current/app'
-                                                    environment:
-                                                        type: field
-                                                        field-type: text
-                                                        field-name: Environment
-                                                        field-default: '%kernel.environment%'
-                                                    default_tube:
-                                                        type: field
-                                                        field-type: text
-                                                        field-name: Default Tube
-                                                        field-default: pw_default
-                                                    tube_map:
-                                                        type: array
-                                                        array-type: keyValue
-                                                        array-name: Tube Map
-                                                        childs:
-                                                            key:
-                                                                type: field
-                                                                field-type: text
-                                                                field-name: Tube Name
-                                                                field-default: '"pw_imageimport"'
-                                                            value:
-                                                                type: array
-                                                                array-type: collection
-                                                                array-name: Handler List
-                                                                childs:
-                                                                    0:
-                                                                        type: field
-                                                                        field-type: text
-                                                                        field-name: Handler
-                                                                        field-default: '"Handler1"'
-                                    ggm.aws.s3:
+                                        field-name: Bundle Layout
+                                        field-default: 'ggmJobAdBundle:Bundle:bundleLayout.html.twig'
+            ggm_advertisement.enabled:
+                type: field
+                field-type: boolean
+                field-name: GGM Advertisement Enabled
+                field-default: true
+            ggm.task.dispatcher:
+                type: field
+                field-type: text
+                field-name: GGM Task Dispatcher
+                field-default: 'ggm\TaskBundle\Dispatcher\BeanstalkDispatcher'
+            ggm.task.dispatcher_config:
+                type: title
+                title-name: GGM Task Dispatcher Config
+                childs:
+                    ggm\TaskBundle\Dispatcher\BeanstalkDispatcher:
+                        type: title
+                        title-name: Beanstalk Dispatcher
+                        childs:
+                            server:
+                                type: field
+                                field-type: text
+                                field-name: Server
+                                field-default: '10.64.202.79:11300'
+                            interpreter:
+                                type: field
+                                field-type: text
+                                field-name: Interpreter
+                                field-default: php70
+                            command_root:
+                                type: field
+                                field-type: text
+                                field-name: Command Root
+                                field-default: '/dataApplication/customers/meinbezirk.at/software/gogol-medien/portal-webapp/releases/current/app'
+                            environment:
+                                type: field
+                                field-type: text
+                                field-name: Environment
+                                field-default: '%kernel.environment%'
+                            default_tube:
+                                type: field
+                                field-type: text
+                                field-name: Default Tube
+                                field-default: pw_default
+                            tube_map:
+                                type: array
+                                array-type: keyValue
+                                array-name: Tube Map
+                                childs:
+                                    key:
+                                        type: field
+                                        field-type: text
+                                        field-name: Tube Name
+                                        field-default: '"pw_imageimport"'
+                                    value:
                                         type: array
-                                        array-type: keyValue
-                                        array-name: GGM AWS S3
+                                        array-type: collection
+                                        array-name: Handler List
                                         childs:
-                                            key:
+                                            0:
                                                 type: field
                                                 field-type: text
-                                                field-name: Key
-                                                field-default: null
-                                            value:
-                                                type: title
-                                                title-name: Configuration
-                                                childs:
-                                                    bucket:
-                                                        type: field
-                                                        field-type: text
-                                                        field-name: Bucket
-                                                        field-default: 'media03.meinbezirk.at'
-                                                    key:
-                                                        type: field
-                                                        field-type: text
-                                                        field-name: Key
-                                                        field-default: KASDBLUIEFNLASJNALUWDBJALKSBFÖEENAFJS
-                                                    secret:
-                                                        type: field
-                                                        field-type: text
-                                                        field-name: Secret
-                                                        field-default: '"adsasg56875a56874583adsfasdfa4sd85465a"'
-                                                    region:
-                                                        type: field
-                                                        field-type: text
-                                                        field-name: Region
-                                                        field-default: 'eu-central-1'
-                                                    default_acl:
-                                                        type: field
-                                                        field-type: text
-                                                        field-name: Default ACL
-                                                        field-default: 'public-read'
-                                                    cloudfront:
-                                                        type: array
-                                                        array-type: keyValue
-                                                        array-name: Cloudfront
-                                                        optional: true
-                                                        childs:
-                                                            key:
-                                                                type: field
-                                                                field-type: text
-                                                                field-name: myKey
-                                                                field-default: CacheControl
-                                                            value:
-                                                                type: title
-                                                                title-name: Options
-                                                                childs:
-                                                                    distribution_id:
-                                                                        type: field
-                                                                        field-type: text
-                                                                        field-name: Distribution ID
-                                                                        field-default: FJSAD7877ASD7987ASFAS78
-                                                                    invalidate_on_delete:
-                                                                        type: field
-                                                                        field-type: boolean
-                                                                        field-name: Invalidate On Delete
-                                                                        field-default: true
+                                                field-name: Handler
+                                                field-default: '"Handler1"'
+            ggm.aws.s3:
+                type: array
+                array-type: keyValue
+                array-name: GGM AWS S3
+                childs:
+                    key:
+                        type: field
+                        field-type: text
+                        field-name: Key
+                        field-default: null
+                    value:
+                        type: title
+                        title-name: Configuration
+                        childs:
+                            bucket:
+                                type: field
+                                field-type: text
+                                field-name: Bucket
+                                field-default: 'media03.meinbezirk.at'
+                            key:
+                                type: field
+                                field-type: text
+                                field-name: Key
+                                field-default: KASDBLUIEFNLASJNALUWDBJALKSBFÖEENAFJS
+                            secret:
+                                type: field
+                                field-type: text
+                                field-name: Secret
+                                field-default: '"adsasg56875a56874583adsfasdfa4sd85465a"'
+                            region:
+                                type: field
+                                field-type: text
+                                field-name: Region
+                                field-default: 'eu-central-1'
+                            default_acl:
+                                type: field
+                                field-type: text
+                                field-name: Default ACL
+                                field-default: 'public-read'
+                            cloudfront:
+                                type: array
+                                array-type: keyValue
+                                array-name: Cloudfront
+                                optional: true
+                                childs:
+                                    key:
+                                        type: field
+                                        field-type: text
+                                        field-name: myKey
+                                        field-default: CacheControl
+                                    value:
+                                        type: title
+                                        title-name: Options
+                                        childs:
+                                            distribution_id:
+                                                type: field
+                                                field-type: text
+                                                field-name: Distribution ID
+                                                field-default: FJSAD7877ASD7987ASFAS78
+                                            invalidate_on_delete:
+                                                type: field
+                                                field-type: boolean
+                                                field-name: Invalidate On Delete
+                                                field-default: true
