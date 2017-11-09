@@ -540,7 +540,7 @@ parameters.yml:
                         type: field
                         field-type: text
                         field-name: Local Delivery Path Prefix Override
-                        field-default: ''
+                        field-default: "''"
                     default_scheme:
                         type: field
                         field-type: text
@@ -584,7 +584,7 @@ parameters.yml:
                                         type: field
                                         field-type: text
                                         field-name: Path Prefix
-                                        field-default: ''
+                                        field-default: "''"
                                     delivery_domain:
                                         type: field
                                         field-type: text
@@ -739,7 +739,7 @@ parameters.yml:
                                         type: field
                                         field-type: text
                                         field-name: Tube Name
-                                        field-default: '"pw_imageimport"'
+                                        field-default: 'pw_imageimport'
                                     value:
                                         type: array
                                         array-type: collection
@@ -749,7 +749,7 @@ parameters.yml:
                                                 type: field
                                                 field-type: text
                                                 field-name: Handler
-                                                field-default: '"Handler1"'
+                                                field-default: 'Handler1'
             ggm.aws.s3:
                 type: array
                 array-type: keyValue
@@ -955,19 +955,16 @@ parameters.yml:
                                         field-type: text
                                         field-name: APP
                                         field-default: portal
-                                        optional: true
                                     type:
                                         type: field
                                         field-type: text
                                         field-name: Type
                                         field-default: visit
-                                        optional: true
                                     customer:
                                         type: field
                                         field-type: text
                                         field-name: Customer
                                         field-default: 'meinbezirk.at'
-                                        optional: true
                     oewa:
                         type: title
                         title-name: Oewa
@@ -1126,7 +1123,7 @@ parameters.yml:
                                 type: field
                                 field-type: text
                                 field-name: Parameter
-                                field-default: "'accept_terms_of_service'"
+                                field-default: accept_terms_of_service
             ggm.classifiedad.email:
                 type: title
                 title-name: GGM Classifiedad Email
