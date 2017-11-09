@@ -550,7 +550,7 @@ parameters.yml:
                         type: field
                         field-type: text
                         field-name: Local Delivery Path Prefix Override
-                        field-default:
+                        field-default: ''
                     default_scheme:
                         type: field
                         field-type: text
