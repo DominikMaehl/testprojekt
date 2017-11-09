@@ -554,7 +554,7 @@ parameters.yml:
                     remote_storages:
                         type: array
                         array-type: keyValue
-                        title-name: Remote Storages
+                        array-name: Remote Storages
                         childs:
                             key:
                                 type: field
