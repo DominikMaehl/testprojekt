@@ -953,7 +953,7 @@ parameters.yml:
                                     field-name: APP
                                     field-default: portal
                                     optional: true
-                                type:
+                                typess:
                                     type: field
                                     field-type: text
                                     field-name: Type
