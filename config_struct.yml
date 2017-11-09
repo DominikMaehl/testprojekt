@@ -229,9 +229,9 @@ parameters.yml:
                                                 childs:
                                                     default_multiplicator:
                                                         type: field
-                                                        field-type: integer
+                                                        field-type: number
                                                         field-name: Default Multiplicator
-                                                        field-default: 1
+                                                        field-default: 0.5
                                                     segments:
                                                         type: array
                                                         array-type: keyValue
@@ -244,9 +244,9 @@ parameters.yml:
                                                                 field-default: 0
                                                             value:
                                                                 type: field
-                                                                field-type: integer
+                                                                field-type: number
                                                                 field-name: Multiplikator
-                                                                field-default: 1
+                                                                field-default: 0.5
                                             text_fee:
                                                 type: title
                                                 title-name: Text Fee
@@ -298,9 +298,9 @@ parameters.yml:
                                                 childs:
                                                     default_multiplicator:
                                                         type: field
-                                                        field-type: integer
+                                                        field-type: number
                                                         field-name: Default Multiplicator
-                                                        field-default: 1
+                                                        field-default: 0.5
                                                     segments:
                                                         type: array
                                                         array-type: keyValue
@@ -313,9 +313,9 @@ parameters.yml:
                                                                 field-default: 0
                                                             value:
                                                                 type: field
-                                                                field-type: integer
+                                                                field-type: number
                                                                 field-name: Multiplikator
-                                                                field-default: 1
+                                                                field-default: 0.5
                                             text_fee:
                                                 type: title
                                                 title-name: Text Fee
@@ -379,3 +379,150 @@ parameters.yml:
                                         field-name: Value
                                         field-default: null
 
+            payment_active:
+                type: field
+                field-type: boolean
+                field-name: Payment Active
+                field-default: false
+            payment_from_email:
+                type: field
+                field-type: text
+                field-name: Payment From Email
+                field-default: 'webmaster@example.com'
+            payment_allowed_methods:
+                type: array
+                array-type: collection
+                array-name: Payment Allowed Methods
+                childs:
+                    type: field
+                    field-type: text
+                    field-name: Payment Method
+                    field-default: paymill_credit_card
+            payment_default_method:
+                type: field
+                field-type: text
+                field-name: Payment Default Method
+                field-default: paymill_credit_card
+            payment_api_private_key:
+                type: field
+                field-type: text
+                field-name: Payment API Private Key
+                field-default: notInUse
+            payment_public_key:
+                type: field
+                field-type: text
+                field-name: Payment Public Key
+                field-default: notInUse
+            ggm_job_ad.advert_list_count:
+                type: field
+                field-type: integer
+                field-name: GGM Job Ad Advert List Count
+                field-default: 10
+            ggm_job_ad.advert_list_valid_time:
+                type: field
+                field-type: integer
+                field-name: GGM Job Ad Advert List Valid Time
+                field-default: 900
+            ggm_job_ad.featured_adverts_first:
+                type: field
+                field-type: boolean
+                field-name: GGM Job Ad Featured Adverts First
+                field-default: true
+            ggm_job_ad.advert_init_count:
+                type: field
+                field-type: integer
+                field-name: GGM Job Ad Advert Init Count
+                field-default: 80
+            ggm_job_ad.advert_load_count:
+                type: field
+                field-type: integer
+                field-name: GGM Job Ad Advert List Valid Time
+                field-default: 20
+            ggm_job_ad.special_advert_count:
+                type: field
+                field-type: integer
+                field-name: GGM Job Ad Special Advert Count
+                field-default: 50
+            ggm_job_ad.disable_socialshare_buttons:
+                type: array
+                array-type: collection
+                array-name: GGM Job Ad Disable Soialshare Buttons
+                childs:
+                    socialnetwork:
+                        type: field
+                        field-type: text
+                        field-name: Social Network
+                        field-default: googleplus
+            ggm_job_ad.hide_category_nav:
+                type: field
+                field-type: boolean
+                field-name: GGM Job Ad Hide Category Nav
+                field-default: true
+            ggm_job_ad.preset_advert_period_in_days:
+                type: field
+                field-type: integer
+                field-name: GGM Job Ad Preset Advert Period In Days
+                field-default: 0
+            ggm_job_ad.rm_expired_adverts_after_days:
+                type: field
+                field-type: integer
+                field-name: GGM Job Ad Rm Expired Adverts After Days
+                field-default: 30
+            ggm_user.default_group:
+                type: field
+                field-type: integer
+                field-name: GGM User Default Group
+                field-default: 2
+            ggm_user.segments:
+                type: title
+                title-name: GGM User Segments
+                childs:
+                    default:
+                        type: field
+                        field-type: text
+                        field-name: Default
+                        field-default: 0
+                    segment_list:
+                        type: array
+                        array-type: collection
+                        array-name: Segment List
+                        childs:
+                            segments:
+                                type: field
+                                field-type: text
+                                field-name: Segment
+                                field-default: regionaut
+                    segment_path:
+                        type: array
+                        array-type: collection
+                        array-name: Segment Path
+                        childs:
+                            segmentpath:
+                                type: field
+                                field-type: text
+                                field-name: Segment Path
+                                field-default: location_root
+            ggm_article_bundle.template_config:
+                type: title
+                title-name: GGM Article Bundle Template Config
+                childs:
+                    default:
+                        type: field
+                        field-type: text
+                        field-name: Default
+                        field-default: 0
+                    template_list:
+                        type: array
+                        array-type: collection
+                        array-name: Template List
+                        childs:
+                            templates:
+                                type: field
+                                field-type: text
+                                field-name: Template
+                                field-default: 'DetailTemplates/detail-0.html.twig'
+            ggm_media.imagemagick_bin:
+                type: field
+                field-type: text
+                field-name: GGM Media Imagemagick Bin
+                field-default: '/usr/bin/convert'
