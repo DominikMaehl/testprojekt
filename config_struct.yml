@@ -1084,7 +1084,7 @@ parameters.yml:
                         field-default: false
                     print_consecutive_max:
                         type: field
-                        field-type: boolean
+                        field-type: integer
                         field-name: Print Consecutive Max
                         field-default: 1
                     anonymous_adverts_enabled:
