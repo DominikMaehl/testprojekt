@@ -588,7 +588,7 @@ parameters.yml:
                                         type: field
                                         field-type: text
                                         field-name: Delivery Domain
-                                        field-default: media04.meinbezirk.at
+                                        field-default: 'media04.meinbezirk.at'
                                     priority_group:
                                         type: field
                                         field-type: integer
