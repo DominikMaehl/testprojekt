@@ -655,8 +655,8 @@ parameters.yml:
                                                 field-default: tpl0
                                             value:
                                                 type: field
-                                                array-type: text
-                                                array-name: Template
+                                                field-type: text
+                                                field-name: Template
                                                 field-default: 'ggmArticleBundle:Cms:contented1.html.twig'
                                     ggm.cms.page.bundles:
                                         type: array
