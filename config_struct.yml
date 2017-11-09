@@ -805,197 +805,200 @@ parameters.yml:
                                         field-name: Invalidate On Delete
                                         field-default: true
             ggm.web.tracking.plugins:
-                google:
-                    type: title
-                    title-name: Google
-                    optional: true
-                    childs:
-                        active:
-                            type: field
-                            field-type: boolean
-                            field-name: Active
-                            field-default: true
-                            optional: true
-                        debug:
-                            type: field
-                            field-type: text
-                            field-name: Debug
-                            field-default: '%kernel.debug%'
-                            optional: true
-                        opt_out:
-                            type: field
-                            field-type: boolean
-                            field-name: Opt Out
-                            field-default: false
-                            optional: true
-                        mode:
-                            type: field
-                            field-type: text
-                            field-name: Mode
-                            field-default: analytics
-                            optional: true
-                        accounts:
-                            type: array
-                            array-type: keyValue
-                            array-name: Accounts
-                            optional: true
-                            childs:
-                                key:
-                                    type: field
-                                    field-type: text
-                                    field-name: Bundle
-                                    field-default: default
-                                value:
-                                    type: array
-                                    array-type: collection
-                                    array-name: keys
-                                    childs:
-                                        0:
-                                            type: field
-                                            field-type: text
-                                            field-name: Key
-                                            field-default: UA-174
-                localtracking:
-                    type: title
-                    title-name: Localtracking
-                    optional: true
-                    childs:
-                        active:
-                            type: field
-                            field-type: boolean
-                            field-name: Active
-                            field-default: true
-                            optional: true
-                        debug:
-                            type: field
-                            field-type: text
-                            field-name: Debug
-                            field-default: '%kernel.debug%'
-                            optional: true
-                        decode_token:
-                            type: field
-                            field-type: text
-                            field-name: Decode Token
-                            field-default: asdasdd3224354sadw235sf23qsd35dw35asd32
-                            optional: true
-                        endpoints:
-                            type: array
-                            array-type: keyValue
-                            array-name: Endpoints
-                            optional: true
-                            childs:
-                                key:
-                                    type: field
-                                    field-type: text
-                                    field-name: Key
-                                    field-default: default
-                                value:
-                                    type: array
-                                    array-type: keyValue
-                                    array-name: keys
-                                    childs:
-                                        url:
-                                            type: field
-                                            field-type: text
-                                            field-name: URL
-                                            field-default: 'https://www.meinbezirk.at/ajax/tracking'
-                                            optional: true
-                                        token:
-                                            type: field
-                                            field-type: text
-                                            field-name: Token
-                                            field-default: 234nojo4hupg43p2ug423ov42ou3v4iz23f4c2t3v4u2b4h2
-                                            optional: true
-                                        legacy:
-                                            type: field
-                                            field-type: boolean
-                                            field-name: Legacy
-                                            field-default: true
-                                            optional: true
-                cockpit:
-                    type: title
-                    title-name: Cockpit
-                    optional: true
-                    childs:
-                        active:
-                            type: field
-                            field-type: boolean
-                            field-name: Active
-                            field-default: true
-                            optional: true
-                        debug:
-                            type: field
-                            field-type: text
-                            field-name: Debug
-                            field-default: '%kernel.debug%'
-                            optional: true
-                        url:
-                            type: field
-                            field-type: text
-                            field-name: URL
-                            field-default: 'https://statistics.gogol-publishing.de/api/tracks'
-                            optional: true
-                        encode_token:
-                            type: field
-                            field-type: text
-                            field-name: Encode Token
-                            field-default: asdasdd3224354sadw235sf23qsd35dw35asd32
-                            optional: true
-                        options:
-                            type: array
-                            array-type: collection
-                            array-name: Options
-                            optional: true
-                            childs:
-                                app:
-                                    type: field
-                                    field-type: text
-                                    field-name: APP
-                                    field-default: portal
-                                    optional: true
-                                typess:
-                                    type: field
-                                    field-type: text
-                                    field-name: Type
-                                    field-default: visit
-                                    optional: true
-                                customer:
-                                    type: field
-                                    field-type: boolean
-                                    field-name: Customer
-                                    field-default: 'meinbezirk.at'
-                                    optional: true
-                oewa:
-                    type: title
-                    title-name: Oewa
-                    optional: true
-                    childs:
-                        active:
-                            type: field
-                            field-type: boolean
-                            field-name: Active
-                            field-default: true
-                            optional: true
-                        debug:
-                            type: field
-                            field-type: text
-                            field-name: Debug
-                            field-default: '%kernel.debug%'
-                            optional: true
-                        async:
-                            type: field
-                            field-type: boolean
-                            field-name: Async
-                            field-default: true
-                            optional: true
-                        site_id:
-                            type: field
-                            field-type: text
-                            field-name: Site ID
-                            field-default: woche
-                            optional: true
-            ggm_legacy.enabled:
-                type: field
-                field-type: boolean
-                field-name: GGM Legacy Enabled
-                field-default: true
+                type: title
+                title-name: GGM Web Tracking Plugins
+                childs:
+                    google:
+                        type: title
+                        title-name: Google
+                        optional: true
+                        childs:
+                            active:
+                                type: field
+                                field-type: boolean
+                                field-name: Active
+                                field-default: true
+                                optional: true
+                            debug:
+                                type: field
+                                field-type: text
+                                field-name: Debug
+                                field-default: '%kernel.debug%'
+                                optional: true
+                            opt_out:
+                                type: field
+                                field-type: boolean
+                                field-name: Opt Out
+                                field-default: false
+                                optional: true
+                            mode:
+                                type: field
+                                field-type: text
+                                field-name: Mode
+                                field-default: analytics
+                                optional: true
+                            accounts:
+                                type: array
+                                array-type: keyValue
+                                array-name: Accounts
+                                optional: true
+                                childs:
+                                    key:
+                                        type: field
+                                        field-type: text
+                                        field-name: Bundle
+                                        field-default: default
+                                    value:
+                                        type: array
+                                        array-type: collection
+                                        array-name: keys
+                                        childs:
+                                            0:
+                                                type: field
+                                                field-type: text
+                                                field-name: Key
+                                                field-default: UA-174
+                    localtracking:
+                        type: title
+                        title-name: Localtracking
+                        optional: true
+                        childs:
+                            active:
+                                type: field
+                                field-type: boolean
+                                field-name: Active
+                                field-default: true
+                                optional: true
+                            debug:
+                                type: field
+                                field-type: text
+                                field-name: Debug
+                                field-default: '%kernel.debug%'
+                                optional: true
+                            decode_token:
+                                type: field
+                                field-type: text
+                                field-name: Decode Token
+                                field-default: asdasdd3224354sadw235sf23qsd35dw35asd32
+                                optional: true
+                            endpoints:
+                                type: array
+                                array-type: keyValue
+                                array-name: Endpoints
+                                optional: true
+                                childs:
+                                    key:
+                                        type: field
+                                        field-type: text
+                                        field-name: Key
+                                        field-default: default
+                                    value:
+                                        type: array
+                                        array-type: keyValue
+                                        array-name: keys
+                                        childs:
+                                            url:
+                                                type: field
+                                                field-type: text
+                                                field-name: URL
+                                                field-default: 'https://www.meinbezirk.at/ajax/tracking'
+                                                optional: true
+                                            token:
+                                                type: field
+                                                field-type: text
+                                                field-name: Token
+                                                field-default: 234nojo4hupg43p2ug423ov42ou3v4iz23f4c2t3v4u2b4h2
+                                                optional: true
+                                            legacy:
+                                                type: field
+                                                field-type: boolean
+                                                field-name: Legacy
+                                                field-default: true
+                                                optional: true
+                    cockpit:
+                        type: title
+                        title-name: Cockpit
+                        optional: true
+                        childs:
+                            active:
+                                type: field
+                                field-type: boolean
+                                field-name: Active
+                                field-default: true
+                                optional: true
+                            debug:
+                                type: field
+                                field-type: text
+                                field-name: Debug
+                                field-default: '%kernel.debug%'
+                                optional: true
+                            url:
+                                type: field
+                                field-type: text
+                                field-name: URL
+                                field-default: 'https://statistics.gogol-publishing.de/api/tracks'
+                                optional: true
+                            encode_token:
+                                type: field
+                                field-type: text
+                                field-name: Encode Token
+                                field-default: asdasdd3224354sadw235sf23qsd35dw35asd32
+                                optional: true
+                            options:
+                                type: array
+                                array-type: collection
+                                array-name: Options
+                                optional: true
+                                childs:
+                                    app:
+                                        type: field
+                                        field-type: text
+                                        field-name: APP
+                                        field-default: portal
+                                        optional: true
+                                    type:
+                                        type: field
+                                        field-type: text
+                                        field-name: Type
+                                        field-default: visit
+                                        optional: true
+                                    customer:
+                                        type: field
+                                        field-type: boolean
+                                        field-name: Customer
+                                        field-default: 'meinbezirk.at'
+                                        optional: true
+                    oewa:
+                        type: title
+                        title-name: Oewa
+                        optional: true
+                        childs:
+                            active:
+                                type: field
+                                field-type: boolean
+                                field-name: Active
+                                field-default: true
+                                optional: true
+                            debug:
+                                type: field
+                                field-type: text
+                                field-name: Debug
+                                field-default: '%kernel.debug%'
+                                optional: true
+                            async:
+                                type: field
+                                field-type: boolean
+                                field-name: Async
+                                field-default: true
+                                optional: true
+                            site_id:
+                                type: field
+                                field-type: text
+                                field-name: Site ID
+                                field-default: woche
+                                optional: true
+                ggm_legacy.enabled:
+                    type: field
+                    field-type: boolean
+                    field-name: GGM Legacy Enabled
+                    field-default: true
