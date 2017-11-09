@@ -394,10 +394,11 @@ parameters.yml:
                 array-type: collection
                 array-name: Payment Allowed Methods
                 childs:
-                    type: field
-                    field-type: text
-                    field-name: Payment Method
-                    field-default: paymill_credit_card
+                    paymentmethod:
+                        type: field
+                        field-type: text
+                        field-name: Payment Method
+                        field-default: paymill_credit_card
             payment_default_method:
                 type: field
                 field-type: text
