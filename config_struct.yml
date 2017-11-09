@@ -614,4 +614,4 @@ parameters.yml:
                                                 type: field
                                                 field-type: text
                                                 field-name: myValue
-                                                field-default: max-age=15552000
+                                                field-default: 'max-age=15552000'
