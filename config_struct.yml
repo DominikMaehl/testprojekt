@@ -546,6 +546,7 @@ parameters.yml:
                         field-type: text
                         field-name: Local Delivery Path Prefix Override
                         field-default: ''
+                        empty-string-when-null: true
                     default_scheme:
                         type: field
                         field-type: text
