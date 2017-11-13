@@ -176,15 +176,10 @@ parameters.yml:
                 field-default: true
             search_connections:
                 type: array
-                array-type: keyValue
+                array-type: collection
                 array-name: Search Connections
                 children:
-                    key:
-                        type: field
-                        field-type: text
-                        field-name: Adress Type
-                        field-default: url
-                    value:
+                    url:
                         type: field
                         field-type: text
                         field-name: Url
