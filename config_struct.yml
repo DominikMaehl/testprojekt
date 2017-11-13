@@ -3,7 +3,7 @@ parameters.yml:
     parameters:
         type: title
         title-name: Parameters
-        childs:
+        children:
             assetic.filters.sass.bin:
                 type: field
                 field-type: text
@@ -113,13 +113,13 @@ parameters.yml:
             ggm.routing.redirects:
                 type: title
                 title-name: GGM Routing Redirects
-                childs:
+                children:
                     static_redirects:
                         type: array
                         array-type: keyValue
                         array-name: Static Redirects
                         null-when-empty: true
-                        childs:
+                        children:
                             key:
                                 type: field
                                 field-type: text
@@ -158,7 +158,7 @@ parameters.yml:
                 type: array
                 array-type: keyValue
                 array-name: GGM Global Phone Country Codes
-                childs:
+                children:
                     key:
                         type: field
                         field-type: country
@@ -178,7 +178,7 @@ parameters.yml:
                 type: array
                 array-type: keyValue
                 array-name: Search Connections
-                childs:
+                children:
                     key:
                         type: field
                         field-type: text
@@ -197,12 +197,12 @@ parameters.yml:
             service_fees:
                 type: title
                 title-name: Service Fees
-                childs:
+                children:
                     regular:
                         type: array
                         array-type: keyValue
                         array-name: Regular
-                        childs:
+                        children:
                             key:
                                 type: field
                                 field-type: text
@@ -211,7 +211,7 @@ parameters.yml:
                             value:
                                 type: title
                                 title-name: Namespace Configuration
-                                childs:
+                                children:
                                     base_fee:
                                         type: field
                                         field-type: integer
@@ -221,12 +221,12 @@ parameters.yml:
                                         type: title
                                         title-name: Options
                                         optional: true
-                                        childs:
+                                        children:
                                             item_count_modifier:
                                                 type: title
                                                 title-name: Item Count Modifier
                                                 optional: true
-                                                childs:
+                                                children:
                                                     default_multiplicator:
                                                         type: field
                                                         field-type: number
@@ -236,7 +236,7 @@ parameters.yml:
                                                         type: array
                                                         array-type: keyValue
                                                         array-name: Segments
-                                                        childs:
+                                                        children:
                                                             key:
                                                                 type: field
                                                                 field-type: integer
@@ -251,7 +251,7 @@ parameters.yml:
                                                 type: title
                                                 title-name: Text Fee
                                                 optional: true
-                                                childs:
+                                                children:
                                                     unit:
                                                         type: field
                                                         field-type: text
@@ -271,7 +271,7 @@ parameters.yml:
                         type: array
                         array-type: keyValue
                         array-name: Commercial
-                        childs:
+                        children:
                             key:
                                 type: field
                                 field-type: text
@@ -280,7 +280,7 @@ parameters.yml:
                             value:
                                 type: title
                                 title-name: Namespace Configuration
-                                childs:
+                                children:
                                     base_fee:
                                         type: field
                                         field-type: integer
@@ -290,12 +290,12 @@ parameters.yml:
                                         type: title
                                         title-name: Options
                                         optional: true
-                                        childs:
+                                        children:
                                             item_count_modifier:
                                                 type: title
                                                 title-name: Item Count Modifier
                                                 optional: true
-                                                childs:
+                                                children:
                                                     default_multiplicator:
                                                         type: field
                                                         field-type: number
@@ -310,7 +310,7 @@ parameters.yml:
                                                         type: array
                                                         array-type: keyValue
                                                         array-name: Segments
-                                                        childs:
+                                                        children:
                                                             key:
                                                                 type: field
                                                                 field-type: integer
@@ -330,7 +330,7 @@ parameters.yml:
                                                 type: title
                                                 title-name: Text Fee
                                                 optional: true
-                                                childs:
+                                                children:
                                                     unit:
                                                         type: field
                                                         field-type: text
@@ -351,7 +351,7 @@ parameters.yml:
                 type: array
                 array-type: keyValue
                 array-name: Maintenance Task
-                childs:
+                children:
                     key:
                         type: field
                         field-type: text
@@ -360,7 +360,7 @@ parameters.yml:
                     value:
                         type: title
                         title-name: Task Configuration
-                        childs:
+                        children:
                             interval:
                                 type: field
                                 field-type: choice
@@ -382,7 +382,7 @@ parameters.yml:
                                 array-type: collection
                                 array-name: Parameters
                                 optional: true
-                                childs:
+                                children:
                                     0:
                                         type: field
                                         field-type: text
@@ -403,7 +403,7 @@ parameters.yml:
                 type: array
                 array-type: collection
                 array-name: Payment Allowed Methods
-                childs:
+                children:
                     0:
                         type: field
                         field-type: text
@@ -458,7 +458,7 @@ parameters.yml:
                 type: array
                 array-type: collection
                 array-name: GGM Job Ad Disable Soialshare Buttons
-                childs:
+                children:
                     0:
                         type: field
                         field-type: text
@@ -487,7 +487,7 @@ parameters.yml:
             ggm_user.segments:
                 type: title
                 title-name: GGM User Segments
-                childs:
+                children:
                     default:
                         type: field
                         field-type: integer
@@ -497,7 +497,7 @@ parameters.yml:
                         type: array
                         array-type: collection
                         array-name: Segment List
-                        childs:
+                        children:
                             0:
                                 type: field
                                 field-type: text
@@ -507,7 +507,7 @@ parameters.yml:
                         type: array
                         array-type: collection
                         array-name: Segment Path
-                        childs:
+                        children:
                             0:
                                 type: field
                                 field-type: text
@@ -516,7 +516,7 @@ parameters.yml:
             ggm_article_bundle.template_config:
                 type: title
                 title-name: GGM Article Bundle Template Config
-                childs:
+                children:
                     default:
                         type: field
                         field-type: integer
@@ -526,7 +526,7 @@ parameters.yml:
                         type: array
                         array-type: collection
                         array-name: Template List
-                        childs:
+                        children:
                             0:
                                 type: field
                                 field-type: text
@@ -540,7 +540,7 @@ parameters.yml:
             ggm_media.storage:
                 type: title
                 title-name: GGM Media Storage
-                childs:
+                children:
                     local_delivery_domain:
                         type: field
                         field-type: text
@@ -565,7 +565,7 @@ parameters.yml:
                         type: array
                         array-type: keyValue
                         array-name: Remote Storages
-                        childs:
+                        children:
                             key:
                                 type: field
                                 field-type: text
@@ -574,7 +574,7 @@ parameters.yml:
                             value:
                                 type: title
                                 title-name: Configuration
-                                childs:
+                                children:
                                     id:
                                         type: field
                                         field-type: text
@@ -615,7 +615,7 @@ parameters.yml:
                                         array-type: keyValue
                                         array-name: Upload Params
                                         null-when-empty: true
-                                        childs:
+                                        children:
                                             key:
                                                 type: field
                                                 field-type: text
@@ -631,7 +631,7 @@ parameters.yml:
                 array-type: keyValue
                 array-name: GGM Cms Teaser Override Templates
                 null-when-empty: true
-                childs:
+                children:
                     key:
                         type: field
                         field-type: text
@@ -641,7 +641,7 @@ parameters.yml:
                         type: array
                         array-type: keyValue
                         array-name: Template
-                        childs:
+                        children:
                             key:
                                 type: field
                                 field-type: text
@@ -657,7 +657,7 @@ parameters.yml:
                 array-type: keyValue
                 array-name: GGM Cms Page Templates
                 null-when-empty: true
-                childs:
+                children:
                     key:
                         type: field
                         field-type: text
@@ -672,7 +672,7 @@ parameters.yml:
                 type: array
                 array-type: keyValue
                 array-name: GGM Cms Page Bundles
-                childs:
+                children:
                     key:
                         type: field
                         field-type: text
@@ -681,7 +681,7 @@ parameters.yml:
                     value:
                         type: title
                         title-name: Configuration
-                        childs:
+                        children:
                             bundle_layout:
                                 type: field
                                 field-type: text
@@ -700,11 +700,11 @@ parameters.yml:
             ggm.task.dispatcher_config:
                 type: title
                 title-name: GGM Task Dispatcher Config
-                childs:
+                children:
                     ggm\TaskBundle\Dispatcher\BeanstalkDispatcher:
                         type: title
                         title-name: Beanstalk Dispatcher
-                        childs:
+                        children:
                             server:
                                 type: field
                                 field-type: text
@@ -734,7 +734,7 @@ parameters.yml:
                                 type: array
                                 array-type: keyValue
                                 array-name: Tube Map
-                                childs:
+                                children:
                                     key:
                                         type: field
                                         field-type: text
@@ -744,7 +744,7 @@ parameters.yml:
                                         type: array
                                         array-type: collection
                                         array-name: Handler List
-                                        childs:
+                                        children:
                                             0:
                                                 type: field
                                                 field-type: text
@@ -754,7 +754,7 @@ parameters.yml:
                 type: array
                 array-type: keyValue
                 array-name: GGM AWS S3
-                childs:
+                children:
                     key:
                         type: field
                         field-type: text
@@ -763,7 +763,7 @@ parameters.yml:
                     value:
                         type: title
                         title-name: Configuration
-                        childs:
+                        children:
                             bucket:
                                 type: field
                                 field-type: text
@@ -793,7 +793,7 @@ parameters.yml:
                                 type: title
                                 title-name: Cloudfront
                                 optional: true
-                                childs:
+                                children:
                                     distribution_id:
                                         type: field
                                         field-type: text
@@ -807,12 +807,12 @@ parameters.yml:
             ggm.web.tracking.plugins:
                 type: title
                 title-name: GGM Web Tracking Plugins
-                childs:
+                children:
                     google:
                         type: title
                         title-name: Google
                         optional: true
-                        childs:
+                        children:
                             active:
                                 type: field
                                 field-type: boolean
@@ -842,7 +842,7 @@ parameters.yml:
                                 array-type: keyValue
                                 array-name: Accounts
                                 optional: true
-                                childs:
+                                children:
                                     key:
                                         type: field
                                         field-type: text
@@ -852,7 +852,7 @@ parameters.yml:
                                         type: array
                                         array-type: collection
                                         array-name: keys
-                                        childs:
+                                        children:
                                             0:
                                                 type: field
                                                 field-type: text
@@ -862,7 +862,7 @@ parameters.yml:
                         type: title
                         title-name: Localtracking
                         optional: true
-                        childs:
+                        children:
                             active:
                                 type: field
                                 field-type: boolean
@@ -886,7 +886,7 @@ parameters.yml:
                                 array-type: keyValue
                                 array-name: Endpoints
                                 optional: true
-                                childs:
+                                children:
                                     key:
                                         type: field
                                         field-type: text
@@ -896,7 +896,7 @@ parameters.yml:
                                         type: array
                                         array-type: keyValue
                                         array-name: keys
-                                        childs:
+                                        children:
                                             url:
                                                 type: field
                                                 field-type: text
@@ -916,7 +916,7 @@ parameters.yml:
                         type: title
                         title-name: Cockpit
                         optional: true
-                        childs:
+                        children:
                             active:
                                 type: field
                                 field-type: boolean
@@ -946,7 +946,7 @@ parameters.yml:
                                 array-type: collection
                                 array-name: Options
                                 optional: true
-                                childs:
+                                children:
                                     app:
                                         type: field
                                         field-type: text
@@ -966,7 +966,7 @@ parameters.yml:
                         type: title
                         title-name: Oewa
                         optional: true
-                        childs:
+                        children:
                             active:
                                 type: field
                                 field-type: boolean
@@ -999,7 +999,7 @@ parameters.yml:
             ggm_legacy.setting:
                 type: title
                 title-name: GGM Legacy Setting
-                childs:
+                children:
                     portal_url:
                         type: field
                         field-type: text
@@ -1023,7 +1023,7 @@ parameters.yml:
             ggm.global.email:
                 type: title
                 title-name: GGM Global Email
-                childs:
+                children:
                     address:
                         type: field
                         field-type: text
@@ -1037,7 +1037,7 @@ parameters.yml:
             ggm.global.report:
                 type: title
                 title-name: GGM Global Report
-                childs:
+                children:
                     enabled:
                         type: field
                         field-type: boolean
@@ -1051,7 +1051,7 @@ parameters.yml:
             ggm.global.feedback:
                 type: title
                 title-name: GGM Global Feedback
-                childs:
+                children:
                     enabled:
                         type: field
                         field-type: boolean
@@ -1065,7 +1065,7 @@ parameters.yml:
             ggm.classifiedad.advert:
                 type: title
                 title-name: GGM Classifiedad Advert
-                childs:
+                children:
                     approval:
                         type: field
                         field-type: choice
@@ -1115,7 +1115,7 @@ parameters.yml:
                         type: array
                         array-type: collection
                         array-name: Confirm Step Checkboxes
-                        childs:
+                        children:
                             0:
                                 type: field
                                 field-type: text
@@ -1124,7 +1124,7 @@ parameters.yml:
             ggm.classifiedad.email:
                 type: title
                 title-name: GGM Classifiedad Email
-                childs:
+                children:
                     from_email:
                         type: field
                         field-type: text
@@ -1148,16 +1148,16 @@ parameters.yml:
             ggm.global.session.config:
                 type: title
                 title-name: GGM Global Session Config
-                childs:
+                children:
                     memcache:
                         type: title
                         title-name: Memcache
-                        childs:
+                        children:
                             servers:
                                 type: array
                                 array-type: collection
                                 array-name: Servers
-                                childs:
+                                children:
                                     0:
                                         type: field
                                         field-type: text
@@ -1171,7 +1171,7 @@ parameters.yml:
                             options:
                                 type: title
                                 title-name: Options
-                                childs:
+                                children:
                                     prefix:
                                         type: field
                                         field-type: text
