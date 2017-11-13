@@ -894,7 +894,7 @@ parameters.yml:
                                         field-default: default
                                     value:
                                         type: array
-                                        array-type: keyValue
+                                        array-type: collection
                                         array-name: keys
                                         children:
                                             url:
