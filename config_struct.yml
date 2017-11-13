@@ -414,7 +414,7 @@ parameters.yml:
                 field-type: text
                 field-name: Payment API Private Key
                 field-default: notInUse
-            payment_public_key:
+            payment_api_public_key:
                 type: field
                 field-type: text
                 field-name: Payment Public Key
@@ -590,7 +590,8 @@ parameters.yml:
                                         type: field
                                         field-type: text
                                         field-name: Path Prefix
-                                        field-default: "''"
+                                        field-default: ''
+                                        empty-string-when-null: true
                                     delivery_domain:
                                         type: field
                                         field-type: text
@@ -889,9 +890,8 @@ parameters.yml:
                                         field-name: Key
                                         field-default: default
                                     value:
-                                        type: array
-                                        array-type: collection
-                                        array-name: keys
+                                        type: title
+                                        title-name: options
                                         children:
                                             url:
                                                 type: field
@@ -938,9 +938,8 @@ parameters.yml:
                                 field-default: asdasdd3224354sadw235sf23qsd35dw35asd32
                                 optional: true
                             options:
-                                type: array
-                                array-type: collection
-                                array-name: Options
+                                type: title
+                                title-name: Options
                                 optional: true
                                 children:
                                     app:
@@ -992,7 +991,7 @@ parameters.yml:
                 field-type: boolean
                 field-name: GGM Legacy Enabled
                 field-default: true
-            ggm_legacy.setting:
+            ggm_legacy.settings:
                 type: title
                 title-name: GGM Legacy Setting
                 children:
@@ -1172,10 +1171,10 @@ parameters.yml:
                                         type: field
                                         field-type: text
                                         field-default: 'pwsmbz-'
-                                        field-name: 'prefix'
+                                        field-name: prefix
                                     expiretime:
                                         type: field
-                                        field-type: text
+                                        field-type: integer
                                         field-default: 1440
-                                        field-name: 'expiretime'
+                                        field-name: expiretime
 
