@@ -216,6 +216,7 @@ parameters.yml:
                 field-type: integer
                 field-name: Database Port
                 field-default: 3306
+                field-info: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
                 field-constraints:
                     0:
                         constraint-name: range
@@ -242,6 +243,7 @@ parameters.yml:
                 field-type: text
                 field-name: Mailer Transport
                 field-default: smtp
+                field-info: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
             mailer_host:
                 type: field
                 field-type: text
@@ -277,6 +279,7 @@ parameters.yml:
                 field-type: text
                 field-name: Assets Version
                 field-default: null
+                field-info: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
                 null-when-empty: true
             ggm.global.root_route:
                 type: field
@@ -363,6 +366,7 @@ parameters.yml:
                 field-type: text
                 field-name: Search Index Name
                 field-default: meinbezirk.at
+                field-info: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
             service_fees:
                 type: title
                 title-name: Service Fees
@@ -485,6 +489,7 @@ parameters.yml:
                                                                 field-type: integer
                                                                 field-name: Anzahl Elemente
                                                                 field-default: 0
+                                                                field-info: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
                                                             value:
                                                                 type: field
                                                                 field-type: number
@@ -535,6 +540,7 @@ parameters.yml:
                                 field-type: choice
                                 field-name: Interval
                                 field-default: null
+                                field-info: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
                                 field-choices: { hourly: hourly, daily: daily, weekly: weekly, monthly: monthly }
                             timeframe_start:
                                 type: field
@@ -598,6 +604,7 @@ parameters.yml:
                 field-type: integer
                 field-name: GGM Job Ad Advert List Count
                 field-default: 10
+                field-info: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
             ggm_job_ad.advert_list_valid_time:
                 type: field
                 field-type: integer
@@ -613,6 +620,7 @@ parameters.yml:
                 field-type: integer
                 field-name: GGM Job Ad Advert Init Count
                 field-default: 80
+                field-info: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
             ggm_job_ad.advert_load_count:
                 type: field
                 field-type: integer
@@ -672,6 +680,7 @@ parameters.yml:
                                 field-type: text
                                 field-name: Segment
                                 field-default: regionaut
+                                field-info: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
                     segment_path:
                         type: array
                         array-type: collection
@@ -720,6 +729,7 @@ parameters.yml:
                         field-type: text
                         field-name: Local Delivery Path Prefix Override
                         field-default: ''
+                        field-info: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
                         empty-string-when-null: true
                     default_scheme:
                         type: field
@@ -771,6 +781,7 @@ parameters.yml:
                                         field-type: text
                                         field-name: Delivery Domain
                                         field-default: 'media04.meinbezirk.at'
+                                        field-info: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
                                     priority_group:
                                         type: field
                                         field-type: integer
@@ -818,6 +829,7 @@ parameters.yml:
                                 field-type: text
                                 field-name: Template Key
                                 field-default: tpl1
+                                field-info: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
                             value:
                                 type: field
                                 field-type: text
@@ -896,6 +908,7 @@ parameters.yml:
                                 field-type: text
                                 field-name: Environment
                                 field-default: '%kernel.environment%'
+                                field-info: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
                             default_tube:
                                 type: field
                                 field-type: text
