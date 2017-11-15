@@ -1,3 +1,172 @@
+bootstrap.yml:
+    filepath_for_config: 'app/config/bootstrap.yml'
+    parameters:
+        type: title
+        title-name: Parameters
+        chilren:
+            ggm.theming.active_theme:
+                type: field
+                field-type: text
+                field-default: ~
+                field-name: GGM Theming Active Theme
+                field-constraints:
+                    0:
+                        constraint-name: length
+                        constraint-options:
+                            min: 5
+                            max: 30
+                            minMessage: Eingabe zu kurz
+                            maxMessage: Eingabe zu lang
+                    1:
+                        constraint-name: notBlank
+            ggm.bootstrap.config:
+                type: title
+                title-name: Bootstrap Config
+                children:
+                    ggmArticleBundle:
+                        type: title
+                        title-name: Article Bundle
+                        children:
+                            enabled:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: Enabled
+                            root:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: Root
+                            prefix:
+                                type: field
+                                field-type: text
+                                field-default: a
+                                field-name: Prefix
+                            class:
+                                type: field
+                                field-type: text
+                                field-default: 'ggm\ArticleBundle\ggmArticleBundle'
+                                field-name: Class
+                    ggmClassifiedAdBundle:
+                        type: title
+                        title-name: Classified Ad Bundle
+                        children:
+                            enabled:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: Enabled
+                            root:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: Root
+                            prefix:
+                                type: field
+                                field-type: text
+                                field-default: cad
+                                field-name: Prefix
+                            class:
+                                type: field
+                                field-type: text
+                                field-default: 'ggm\ClassifiedAdBundle\ggmClassifiedAdBundle'
+                                field-name: Class
+                    ggmJobAdBundle:
+                        type: title
+                        title-name: Job Ad Bundle
+                        children:
+                            enabled:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: Enabled
+                            root:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: Root
+                            prefix:
+                                type: field
+                                field-type: text
+                                field-default: jobs
+                                field-name: Prefix
+                            class:
+                                type: field
+                                field-type: text
+                                field-default: 'ggm\JobAdBundle\ggmJobAdBundle'
+                                field-name: Class
+                    ggmNewsAgencyBundle:
+                        type: title
+                        title-name: News Agency Bundle
+                        children:
+                            enabled:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: Enabled
+                            root:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: Root
+                            prefix:
+                                type: field
+                                field-type: text
+                                field-default: news-agency
+                                field-name: Prefix
+                            class:
+                                type: field
+                                field-type: text
+                                field-default: 'ggm\NewsAgencyBundle\ggmNewsAgencyBundle'
+                                field-name: Class
+                    ggmEventCalendarBundle:
+                        type: title
+                        title-name: Event Calendar Bundle
+                        children:
+                            enabled:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: Enabled
+                            root:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: Root
+                            prefix:
+                                type: field
+                                field-type: text
+                                field-default: event
+                                field-name: Prefix
+                            class:
+                                type: field
+                                field-type: text
+                                field-default: 'ggm\EventCalendarBundle\ggmEventCalendarBundle'
+                                field-name: Class
+                    ggmCustomerBundle:
+                        type: title
+                        title-name: Customer Bundle
+                        children:
+                            enabled:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: Enabled
+                            root:
+                                type: field
+                                field-type: boolean
+                                field-default: false
+                                field-name: Root
+                            prefix:
+                                type: field
+                                field-type: text
+                                field-default:
+                                field-name: Prefix
+                            class:
+                                type: field
+                                field-type: text
+                                field-default: '$ggm.theming.active_theme$\CustomerBundle\CustomerBundle'
+                                field-name: Class
 parameters.yml:
     filepath_for_config: 'app/config/parameters.yml'
     parameters:
@@ -1011,7 +1180,7 @@ parameters.yml:
                         field-name: Api Key
                         field-default: '13214hpo14124hoip14313_41poh4314134'
             ggm.global.google_api_key:
-                type: title
+                type: field
                 field-type: text
                 field-name: GGM Global Google Api Key
                 field-default: 'SASD123er3f42323fDASDAS_1233DSAd314'
