@@ -3,7 +3,7 @@ bootstrap.yml:
     parameters:
         type: title
         title-name: Parameters
-        chilren:
+        children:
             ggm.theming.active_theme:
                 type: field
                 field-type: text
