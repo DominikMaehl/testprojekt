@@ -37,7 +37,7 @@ parameters.yml:
                 field-default: 10.64.202.70
                 field-constraints:
                     0:
-                        constraint-name: Ip
+                        constraint-name: ip
             database_port:
                 type: field
                 field-type: integer
@@ -45,7 +45,7 @@ parameters.yml:
                 field-default: 3306
                 field-constraints:
                     0:
-                        constraint-name: Range
+                        constraint-name: range
                         constraint-options:
                             min: 0
                             max: 65535
@@ -153,7 +153,7 @@ parameters.yml:
                 field-default: 'http://www.meinbezirk.at/'
                 field-constraints:
                     0:
-                        constraint-name: Url
+                        constraint-name: url
             ggm.global.phone_country_codes:
                 type: array
                 array-type: keyValue
@@ -298,7 +298,7 @@ parameters.yml:
                                                         field-default: 0.5
                                                         field-constraints:
                                                             0:
-                                                                constraint-name: Type
+                                                                constraint-name: type
                                                                 constraint-options:
                                                                     type: float
                                                     segments:
@@ -318,7 +318,7 @@ parameters.yml:
                                                                 field-default: 0.5
                                                                 field-constraints:
                                                                     0:
-                                                                        constraint-name: Type
+                                                                        constraint-name: type
                                                                         constraint-options:
                                                                             type: float
                                             text_fee:
