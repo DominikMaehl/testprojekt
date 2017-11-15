@@ -178,21 +178,25 @@ parameters.yml:
                 field-type: text
                 field-name: Assetic Filters SASS Bin
                 field-default: '/usr/local/bin/sass'
+                field-info: Der relative Pfad zum SASS Bin Ordner
             assetic.filters.uglifyjs2.bin:
                 type: field
                 field-type: text
                 field-name: Assetic Filters Uglify JS Bin
                 field-default: '/usr/local/bin/uglifyjs'
+                field-info: Der relative Pfad zum Uglify JS Bin Ordner
             assetic.filters.uglifycss.bin:
                 type: field
                 field-type: text
                 field-name: Assetic Filters Uglify CSS Bin
                 field-default: '/usr/local/bin/uglifycss'
+                field-info: Der relative Pfad zum Uglify CSS Bin Ordner
             database_driver:
                 type: field
                 field-type: text
                 field-name: Database Driver
                 field-default: pdo_mysql
+                field-info: 'Hier gibt es verschiedene Arten von Datenbanktreibern: *pdo_mysql* , *test*, *test*'
             database_path:
                 type: field
                 field-type: text
@@ -304,6 +308,7 @@ parameters.yml:
                         field-type: boolean
                         field-name: Not Found Redirects Enabled
                         field-default: false
+                        field-info: 'Wenn aktiviert, wird es draußen besseres Wetter'
                     custom_redirect_service:
                         type: field
                         field-type: text
