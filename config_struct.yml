@@ -7,7 +7,6 @@ bootstrap.yml:
             ggm.theming.active_theme:
                 type: field
                 field-type: text
-                field-default: ~
                 field-name: GGM Theming Active Theme
                 field-constraints:
                     0:
@@ -30,12 +29,10 @@ bootstrap.yml:
                             enabled:
                                 type: field
                                 field-type: boolean
-                                field-default: false
                                 field-name: Enabled
                             root:
                                 type: field
                                 field-type: boolean
-                                field-default: false
                                 field-name: Root
                             prefix:
                                 type: field
@@ -45,7 +42,6 @@ bootstrap.yml:
                             class:
                                 type: field
                                 field-type: text
-                                field-default: 'ggm\ArticleBundle\ggmArticleBundle'
                                 field-name: Class
                     ggmClassifiedAdBundle:
                         type: title
@@ -83,12 +79,10 @@ bootstrap.yml:
                             root:
                                 type: field
                                 field-type: boolean
-                                field-default: false
                                 field-name: Root
                             prefix:
                                 type: field
                                 field-type: text
-                                field-default: jobs
                                 field-name: Prefix
                             class:
                                 type: field
@@ -141,7 +135,6 @@ bootstrap.yml:
                             class:
                                 type: field
                                 field-type: text
-                                field-default: 'ggm\EventCalendarBundle\ggmEventCalendarBundle'
                                 field-name: Class
                     ggmCustomerBundle:
                         type: title
