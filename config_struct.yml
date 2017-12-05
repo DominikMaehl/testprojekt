@@ -21,10 +21,12 @@ bootstrap.yml:
             ggm.bootstrap.config:
                 type: title
                 title-name: Bootstrap Config
+                optional: true
                 children:
                     ggmArticleBundle:
                         type: title
                         title-name: Article Bundle
+                        optional: true
                         children:
                             enabled:
                                 type: field
@@ -39,6 +41,10 @@ bootstrap.yml:
                                 field-type: text
                                 field-default: a
                                 field-name: Prefix
+                                optional: true
+                                field-constraints:
+                                    -
+                                        constraint-name: url
                             class:
                                 type: field
                                 field-type: text
