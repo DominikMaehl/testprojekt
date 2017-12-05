@@ -16,8 +16,6 @@ bootstrap.yml:
                             max: 30
                             min-message: Eingabe zu kurz
                             max-message: Eingabe zu lang
-                    1:
-                        constraint-name: notBlank
             ggm.bootstrap.config:
                 type: title
                 title-name: Bootstrap Config
