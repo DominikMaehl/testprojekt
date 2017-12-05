@@ -10,7 +10,7 @@ bootstrap.yml:
                 field-name: GGM Theming Active Theme
                 field-constraints:
                     0:
-                        constraintt-name: length
+                        constraint-name: length
                         constraint-options:
                             min: 5
                             max: 30
